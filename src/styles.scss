@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 
 /*** VARIABLES*****/
 
+$orange: #ff7b4a;
+$pink: #ff435b;
+$backgroundColor: #e9f1ff;
+$cardColor: #d5def0;
 html,
 body {
     height: 100%;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
