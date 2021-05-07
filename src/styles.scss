@@ -2,12 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
-/*** VARIABLES*****/
+/*********variables************/
 
-$orange: #ff7b4a;
-$pink: #ff435b;
-$backgroundColor: #e9f1ff;
-$cardColor: #d5def0;
+@import url('./styles/_variables.scss');
 html,
 body {
     height: 100%;
