@@ -4,6 +4,7 @@
     max-width: 700px;
     margin: auto;
     height: 100%;
+    position: relative;
 }
 
 .notepad__search {
@@ -145,6 +146,7 @@ form {
     max-width: 580px;
     padding: 10px;
     cursor: pointer;
+    position: relative;
     // background-color: #eaeaea02;
     background-color: white;
     box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
@@ -175,4 +177,12 @@ form {
         flex-grow: 1;
         color: rgba(145, 142, 142, 0.959);
     }
+}
+
+.add__note {
+    position: absolute;
+    border: 1px solid red;
+    z-index: 100;
+    bottom: 30px;
+    left: 37%;
 }
