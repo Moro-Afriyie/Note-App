@@ -40,4 +40,7 @@ export class NotepadPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onCardClicked(){
+    console.log("card clicked");
+  }
 }
