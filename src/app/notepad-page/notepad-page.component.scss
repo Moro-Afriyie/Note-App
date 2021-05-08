@@ -180,9 +180,8 @@ form {
 }
 
 .add__note {
-    position: absolute;
     border: 1px solid red;
-    z-index: 100;
-    bottom: 30px;
-    left: 37%;
+    padding: 15px;
+    width: 160px;
+    margin-left: 30%;
 }
