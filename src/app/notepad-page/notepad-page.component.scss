@@ -164,4 +164,7 @@ form {
         border-radius: 15px;
         background-color: #f6f5f0;
     }
+    .card__body {
+        flex-grow: 1;
+    }
 }
