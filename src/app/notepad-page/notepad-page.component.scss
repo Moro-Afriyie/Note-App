@@ -128,10 +128,10 @@ form {
 
 .notepad__cards {
     flex: 1;
-    border: 1px solid;
     margin-top: 1rem;
-    max-width: 100%;
+    // max-width: 100%;
     // border: 1px solid red;
+    max-width: 635px;
     overflow-y: auto;
 }
 
