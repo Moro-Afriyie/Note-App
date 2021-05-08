@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-notepad-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotepadPageComponent implements OnInit {
   body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus."
-  constructor() {
+  constructor(private router: Router) {
 // const input:any = document.querySelector(".finder__input");
 // const finder:any = document.querySelector(".finder");
 // const form:any = document.querySelector("form");
@@ -41,6 +42,9 @@ export class NotepadPageComponent implements OnInit {
   }
 
   onCardClicked(){
-    console.log("card clicked");
+    this.router.navigate(['/viewNote']);
+  }
+  onAddNoteClicked(){
+    this.router.navigate(['/addNote']);
   }
 }
