@@ -7,6 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NotepadPageComponent } from './notepad-page/notepad-page.component';
 import { AddNotePageComponent } from './add-note-page/add-note-page.component';
 import { ViewNotePageComponent } from './view-note-page/view-note-page.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ViewNotePageComponent } from './view-note-page/view-note-page.component
     MainPageComponent,
     NotepadPageComponent,
     AddNotePageComponent,
-    ViewNotePageComponent
+    ViewNotePageComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
