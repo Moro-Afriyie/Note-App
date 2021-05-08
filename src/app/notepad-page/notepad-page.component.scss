@@ -146,4 +146,14 @@ form {
     &:hover {
         transform: scale(1.02);
     }
+    .card__date {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-items: center;
+        padding: 5px 10px;
+        margin-right: 15px;
+        border-radius: 15px;
+        background-color: #f6f5f0;
+    }
 }
