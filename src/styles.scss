@@ -17,3 +17,10 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+
+/* scrollbar width */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
