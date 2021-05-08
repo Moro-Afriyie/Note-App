@@ -141,10 +141,12 @@ form {
 .card-container {
     border: 1px transparent;
     display: flex;
-    width: 460px;
+    // width: 460px;
+    width: 100%;
     padding: 10px;
     cursor: pointer;
-    background-color: #eaeaea02;
+    // background-color: #eaeaea02;
+    background-color: white;
     box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
     margin: 8px;
     &:hover {
