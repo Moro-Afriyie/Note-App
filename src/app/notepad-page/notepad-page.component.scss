@@ -132,7 +132,7 @@ form {
     /* margin-top: 1rem; */
     max-width: 635px;
     overflow-y: auto;
-    height: 76vh;
+    height: 66vh;
     position: relative;
 }
 
@@ -180,8 +180,17 @@ form {
 }
 
 .add__note {
-    border: 1px solid red;
-    padding: 15px;
     width: 160px;
     margin-left: 30%;
+    color: white;
+    background: linear-gradient( 66deg, #ff7b4a 44%, #ff435b 84%);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    padding: auto;
+    margin-top: 1rem;
+    border-radius: 20px;
+    padding: 6px;
+    margin-bottom: auto;
 }
