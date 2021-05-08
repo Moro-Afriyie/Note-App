@@ -193,4 +193,9 @@ form {
     border-radius: 20px;
     padding: 6px;
     margin-bottom: auto;
+    cursor: pointer;
+    span,
+    h4 {
+        align-self: center;
+    }
 }
