@@ -156,4 +156,12 @@ form {
         border-radius: 15px;
         background-color: #f6f5f0;
     }
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 8px 10px;
+        border-radius: 15px;
+        background-color: #f6f5f0;
+    }
 }
