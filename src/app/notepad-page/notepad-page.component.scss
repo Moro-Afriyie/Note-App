@@ -129,7 +129,7 @@ form {
 .notepad__cards {
     flex: 1;
     border: 1px solid;
-    margin-top: 6rem;
+    margin-top: 1rem;
     max-width: 100%;
     border: 1px solid red;
     overflow-y: auto;
@@ -142,7 +142,7 @@ form {
     border: 1px transparent;
     display: flex;
     // width: 460px;
-    width: 100%;
+    max-width: 600px;
     padding: 10px;
     cursor: pointer;
     // background-color: #eaeaea02;
