@@ -131,7 +131,7 @@ form {
     border: 1px solid;
     margin-top: 1rem;
     max-width: 100%;
-    border: 1px solid red;
+    // border: 1px solid red;
     overflow-y: auto;
 }
 
@@ -160,7 +160,7 @@ form {
         padding: 5px 10px;
         margin-right: 15px;
         border-radius: 15px;
-        background-color: #f6f5f0;
+        // background-color: #eeeeee;
     }
     .card__content {
         display: flex;
@@ -168,7 +168,8 @@ form {
         flex-grow: 1;
         padding: 8px 10px;
         border-radius: 15px;
-        background-color: #f6f5f0;
+        // background-color: #f6f5f0;
+        // background-color: #eeeeee;
     }
     .card__body {
         flex-grow: 1;
