@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {NoteDetailsModule } from '../models/note.model';
 
 @Component({
   selector: 'app-notepad-page',
@@ -9,6 +10,12 @@ import { Router } from '@angular/router';
 export class NotepadPageComponent implements OnInit {
   body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus.";
   title: string = "Title";
+  // fields
+  private noteDetails: NoteDetailsModule;
+  private note: Date;
+  //Date array
+  private monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  ]
   
   constructor(private router: Router) {
 // const input:any = document.querySelector(".finder__input");
