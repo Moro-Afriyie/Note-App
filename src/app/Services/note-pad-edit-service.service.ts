@@ -7,7 +7,7 @@ import {NoteDetailsModule } from '../models/note.model';
 export class NotePadEditServiceService {
 
   // fields
-  private noteDetails: NoteDetailsModule;
+  private noteDetailsArray: NoteDetailsModule[];
   private note: Date;
   //Date array
   private monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
@@ -23,8 +23,24 @@ export class NotePadEditServiceService {
     // console.log(this.noteDetails);
   }
 
+  //create a new note
+  createNote(note: NoteDetailsModule){
+    this.noteDetailsArray.push(note);
+
+  }
+
+  // get the notes
   getNote(){
-    
+  }
+  
+  //edit the notes
+  updateNote(){
+
+  }
+
+  // delte the note
+  deleteNote(){
+
   }
 }
 
