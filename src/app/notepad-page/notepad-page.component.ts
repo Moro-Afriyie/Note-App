@@ -76,4 +76,9 @@ export class NotepadPageComponent implements OnInit {
   onAddNoteClicked(){
     this.router.navigate(['/addNote']);
   }
+
+  // when the delete button is pressed
+  onDeleteNote(){
+    
+  }
 }
