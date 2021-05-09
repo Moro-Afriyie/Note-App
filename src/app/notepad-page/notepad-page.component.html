@@ -15,11 +15,11 @@
         <div class="card-container" (click)="onCardClicked()">
             <div class="card__date">
                 <h1 class="card__date__day">{{noteDetails.day}}</h1>
-                <p class="card__date__month">May</p>
+                <p class="card__date__month">{{noteDetails.month}}</p>
             </div>
             <div class="card__content">
-                <h3 class="card__title">Title</h3>
-                <p class="card__body">{{body| truncate : 110 : true }}</p>
+                <h3 class="card__title">{{noteDetails.title}}</h3>
+                <p class="card__body">{{noteDetails.body| truncate : 110 : true }}</p>
             </div>
         </div>
     </div>
