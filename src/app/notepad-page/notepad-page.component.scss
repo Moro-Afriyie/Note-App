@@ -143,17 +143,18 @@ form {
 .card-container {
     border: 1px transparent;
     display: flex;
-    // width: 460px;
     max-width: 580px;
     padding: 10px;
     cursor: pointer;
     position: relative;
-    // background-color: #eaeaea02;
     background-color: white;
     box-shadow: $boxShadow;
     margin: 8px;
     &:hover {
-        transform: scale(1.02);
+        // transform: scale(1.02);
+        background-color: #f7f7f7;
+        transform: scale( 0.95);
+        box-shadow: 0px 5px 10px 0px rgb( 0, 0, 0, .2);
     }
     .card__date {
         display: flex;
@@ -163,7 +164,6 @@ form {
         padding: 5px 10px;
         margin-right: 15px;
         border-radius: 15px;
-        // background-color: #eeeeee;
     }
     .card__content {
         display: flex;
@@ -171,8 +171,6 @@ form {
         flex-grow: 1;
         padding: 8px 10px;
         border-radius: 15px;
-        // background-color: #f6f5f0;
-        // background-color: #eeeeee;
     }
     .card__body {
         flex-grow: 1;
