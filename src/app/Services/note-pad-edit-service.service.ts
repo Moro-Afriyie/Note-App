@@ -15,7 +15,7 @@ export class NotePadEditServiceService {
   constructor(){
     // this.note = new Date();
     // this.noteDetails = new NoteDetailsModule(
-    // this.note.getDay(),
+    // this.note.getDate(),
     // this.monthsArr[this.note.getMonth()],
     // "Moro",
     // "lorem ipsum"

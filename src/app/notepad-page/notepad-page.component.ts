@@ -21,7 +21,7 @@ export class NotepadPageComponent implements OnInit {
   // note pad list
   this.note = new Date();
     this.noteDetails = new NoteDetailsModule(
-    this.note.getDay(),
+    this.note.getDate(),
     this.monthsArr[this.note.getMonth()],
     this.title,
     this.body,
