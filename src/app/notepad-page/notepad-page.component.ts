@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./notepad-page.component.scss']
 })
 export class NotepadPageComponent implements OnInit {
-  body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus."
+  body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus.";
+  title: string = "Title";
+  
   constructor(private router: Router) {
 // const input:any = document.querySelector(".finder__input");
 // const finder:any = document.querySelector(".finder");
