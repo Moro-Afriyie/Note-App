@@ -21,6 +21,9 @@
                 <h3 class="card__title">{{noteDetails.title}}</h3>
                 <p class="card__body">{{noteDetails.body| truncate : 110 : true }}</p>
             </div>
+            <div class="card__item__option delete js-option">
+                <i class="fas fa-trash"></i>
+            </div>
         </div>
     </div>
     <div class="add__note" (click)="onAddNoteClicked()">
