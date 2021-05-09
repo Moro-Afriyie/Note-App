@@ -160,6 +160,18 @@ form {
             opacity: 1;
         }
     }
+    /****Cards delete animation**********/
+    &.delete {
+        background-color: $backgroundColor;
+        animation: deleteAnimation 1.5s cubic-bezier(0, 0, 0, 1.12) forwards;
+        animation-delay: .6s;
+    }
+    @keyframes deleteAnimation {
+        to {
+            transform: translateX( -100px);
+            opacity: 0;
+        }
+    }
     .card__container__box {
         display: flex;
         flex-grow: 1;
@@ -204,18 +216,6 @@ form {
             font-size: 18px;
         }
     }
-    /****Cards delete animation**********/
-    // .delete {
-    //     background-color: $backgroundColor;
-    //     animation: deleteAnimation 1.5s cubic-bezier(0, 0, 0, 1.12) forwards;
-    //     animation-delay: .6s;
-    // }
-    // @keyframes deleteAnimation {
-    //     to {
-    //         transform: translateX( -100px);
-    //         opacity: 0;
-    //     }
-    // }
 }
 
 .add__note {
