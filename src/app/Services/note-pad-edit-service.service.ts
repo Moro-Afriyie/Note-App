@@ -28,7 +28,7 @@ export class NotePadEditServiceService {
   //create a new note
   createNote(title: string, body: string){
     this.note = new Date();
-  this.day = this.note.getDate().toString()
+    this.day = this.note.getDate().toString()
     if(this.day.length<2)
       this.day = "0"+this.day;
     this.noteDetails = new NoteDetailsModule(
