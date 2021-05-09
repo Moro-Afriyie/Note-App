@@ -18,6 +18,16 @@ export class NotepadPageComponent implements OnInit {
   ]
   
   constructor(private router: Router) {
+  // note pad list
+  this.note = new Date();
+    this.noteDetails = new NoteDetailsModule(
+    this.note.getDay(),
+    this.monthsArr[this.note.getMonth()],
+    this.title,
+    this.body,
+    );
+    console.log(this.noteDetails);  
+
 // const input:any = document.querySelector(".finder__input");
 // const finder:any = document.querySelector(".finder");
 // const form:any = document.querySelector("form");
