@@ -11,10 +11,10 @@ export class NotepadPageComponent implements OnInit {
   body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus.";
   title: string = "Title";
   // fields
-  private noteDetails: NoteDetailsModule;
-  private note: Date;
+  noteDetails: NoteDetailsModule;
+  note: Date;
   //Date array
-  private monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
   ]
   
   constructor(private router: Router) {
