@@ -1,12 +1,12 @@
 export class NoteDetailsModule{
     // fields
-    day: number;
+    day: string;
     month: string;
     title: string;
     body: string;
     
   
-    constructor(day:number, month: string, title: string, body: string){
+    constructor(day:string, month: string, title: string, body: string){
       this.day = day;
       this.month = month;
       this.title = title;

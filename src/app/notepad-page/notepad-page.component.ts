@@ -13,6 +13,7 @@ export class NotepadPageComponent implements OnInit {
   // fields
   noteDetails: NoteDetailsModule;
   note: Date;
+  private day: string;
   //Date array
   monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
   ]
@@ -20,8 +21,11 @@ export class NotepadPageComponent implements OnInit {
   constructor(private router: Router) {
   // note pad list
   this.note = new Date();
+  this.day = this.note.getDate().toString()
+    if(this.day.length<2)
+      this.day = "0"+this.day;
     this.noteDetails = new NoteDetailsModule(
-    this.note.getDate(),
+    this.day,
     this.monthsArr[this.note.getMonth()],
     this.title,
     this.body,
