@@ -22,4 +22,9 @@ export class NotePadEditServiceService {
     // );
     // console.log(this.noteDetails);
   }
+
+  getNote(){
+    
+  }
 }
+
