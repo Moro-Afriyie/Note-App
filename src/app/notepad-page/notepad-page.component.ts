@@ -12,6 +12,7 @@ export class NotepadPageComponent implements OnInit {
   title: string = "Title";
   // fields
   noteDetails: NoteDetailsModule;
+  notepadListArray: NoteDetailsModule[];
   note: Date;
   private day: string;
   //Date array
@@ -31,6 +32,10 @@ export class NotepadPageComponent implements OnInit {
     this.body,
     );
     console.log(this.noteDetails);  
+    this.notepadListArray.push(this.noteDetails);
+    this.notepadListArray.push(this.noteDetails);
+    this.notepadListArray.push(this.noteDetails);
+    this.notepadListArray.push(this.noteDetails);
 
 // const input:any = document.querySelector(".finder__input");
 // const finder:any = document.querySelector(".finder");
