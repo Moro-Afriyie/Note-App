@@ -79,7 +79,8 @@ export class NotepadPageComponent implements OnInit {
 
   // when the delete button is pressed
   onDeleteNote(index: number){
-    
+    console.log('index: ', index);
+    let optionBtns = document.querySelectorAll('.js-option');
   
   }
 }
