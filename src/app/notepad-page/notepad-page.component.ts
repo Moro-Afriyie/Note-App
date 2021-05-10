@@ -95,7 +95,7 @@ export class NotepadPageComponent implements OnInit {
      * Execute the delete animation
      */
      requestAnimationFrame(() => {
-      archiveOrDelete(notificationCard);
+      DeleteNote(notificationCard);
 
       /*
        * Add transition
@@ -123,7 +123,7 @@ export class NotepadPageComponent implements OnInit {
      * delete or archive class
      * To a notification card
      */
-     var archiveOrDelete = notificationCard => {
+     var DeleteNote = (notificationCard) => {
       notificationCard.classList.add('delete');
     };
   
