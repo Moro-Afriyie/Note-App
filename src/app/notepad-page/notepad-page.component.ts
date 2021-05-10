@@ -86,11 +86,11 @@ export class NotepadPageComponent implements OnInit {
      setTimeout(() => {
       this.notepadListArray.splice(index, 1); // delete the card
       this.notepadListArray = [...this.notepadListArray]; // update the list
+      console.log(this.notepadListArray);
     }, 3200);
 
-    var notepadCards: any = optionBtns[index].parentNode.parentNode;
-    console.log(`notification card: ${notepadCards}, index: ${index}`);
-
+    var notepadCards: any = optionBtns[index].parentNode;
+   
      /*
      * Execute the delete animation
      */
