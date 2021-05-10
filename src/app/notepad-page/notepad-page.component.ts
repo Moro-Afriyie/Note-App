@@ -81,11 +81,14 @@ export class NotepadPageComponent implements OnInit {
   onDeleteNote(index: number){
     console.log('index: ', index);
     let optionBtns = document.querySelectorAll('.js-option');
-    
+
      // set setTimeout to allow the deletion to happen
      setTimeout(() => {
       this.notepadListArray.splice(index, 1); // delete the card
       this.notepadListArray = [...this.notepadListArray]; // update the list
     }, 3200);
+
+    var notificationCard: any = optionBtns[index].parentNode.parentNode;
+    console.log(`notification card: ${notificationCard}, index: ${index}`);
   }
 }
