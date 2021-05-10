@@ -118,5 +118,14 @@ export class NotepadPageComponent implements OnInit {
          }, 1500);
       }, 1500);
     });
+     /*
+     * Function that adds
+     * delete or archive class
+     * To a notification card
+     */
+     var archiveOrDelete = notificationCard => {
+      notificationCard.classList.add('delete');
+    };
+  
   }
 }
