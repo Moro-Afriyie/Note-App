@@ -151,6 +151,7 @@ form {
     box-shadow: $boxShadow;
     margin: 8px;
     transition: all .2s ease-in;
+    border-radius: 10px;
     &:hover {
         // transform: scale(1.02);
         background-color: #f7f7f7;

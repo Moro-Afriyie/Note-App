@@ -108,7 +108,7 @@ export class NotepadPageComponent implements OnInit {
       console.log(this.notepadListArray);
     }, 3200);
 
-    var notepadCards: any = optionBtns[index].parentNode.parentNode;
+    var notepadCards: any = optionBtns[index].parentNode;
     console.log(notepadCards);
    
      /*
