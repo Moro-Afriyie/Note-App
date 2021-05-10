@@ -88,14 +88,14 @@ export class NotepadPageComponent implements OnInit {
       this.notepadListArray = [...this.notepadListArray]; // update the list
     }, 3200);
 
-    var notificationCard: any = optionBtns[index].parentNode.parentNode;
-    console.log(`notification card: ${notificationCard}, index: ${index}`);
+    var notepadCards: any = optionBtns[index].parentNode.parentNode;
+    console.log(`notification card: ${notepadCards}, index: ${index}`);
 
      /*
      * Execute the delete animation
      */
      requestAnimationFrame(() => {
-      DeleteNote(notificationCard);
+      DeleteNote(notepadCards);
 
       /*
        * Add transition
@@ -104,17 +104,17 @@ export class NotepadPageComponent implements OnInit {
        */
       window.setTimeout(() => {
         requestAnimationFrame(() => {
-          notificationCard.style.transition = 'all .4s ease';
-          notificationCard.style.height = 0;
-          notificationCard.style.margin = 0;
-          notificationCard.style.padding = 0;
+          notepadCards.style.transition = 'all .4s ease';
+          notepadCards.style.height = 0;
+          notepadCards.style.margin = 0;
+          notepadCards.style.padding = 0;
         });
 
         /*
          * Delete definitely the animation card
          */
         window.setTimeout(() => {
-          notificationCard.parentNode.removeChild(notificationCard);
+          notepadCards.parentNode.removeChild(notepadCards);
          }, 1500);
       }, 1500);
     });
@@ -123,8 +123,8 @@ export class NotepadPageComponent implements OnInit {
      * delete or archive class
      * To a notification card
      */
-     var DeleteNote = (notificationCard) => {
-      notificationCard.classList.add('delete');
+     var DeleteNote = (notepadCards) => {
+      notepadCards.classList.add('delete');
     };
   
   }
