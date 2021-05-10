@@ -90,5 +90,33 @@ export class NotepadPageComponent implements OnInit {
 
     var notificationCard: any = optionBtns[index].parentNode.parentNode;
     console.log(`notification card: ${notificationCard}, index: ${index}`);
+
+     /*
+     * Execute the delete animation
+     */
+     requestAnimationFrame(() => {
+      archiveOrDelete(notificationCard);
+
+      /*
+       * Add transition
+       * That smoothly remove the blank space
+       * Leaves by the deleted notification card
+       */
+      window.setTimeout(() => {
+        requestAnimationFrame(() => {
+          notificationCard.style.transition = 'all .4s ease';
+          notificationCard.style.height = 0;
+          notificationCard.style.margin = 0;
+          notificationCard.style.padding = 0;
+        });
+
+        /*
+         * Delete definitely the animation card
+         */
+        window.setTimeout(() => {
+          notificationCard.parentNode.removeChild(notificationCard);
+         }, 1500);
+      }, 1500);
+    });
   }
 }
