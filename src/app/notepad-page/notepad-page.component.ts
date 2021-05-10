@@ -78,7 +78,7 @@ export class NotepadPageComponent implements OnInit {
   }
 
   // when the delete button is pressed
-  onDeleteNote(index){
+  onDeleteNote(index: number){
     
   
   }
