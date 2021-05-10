@@ -19,6 +19,9 @@ export class NotepadPageComponent implements OnInit {
   //Date array
   monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
   ]
+  noteDetails1: NoteDetailsModule;
+  noteDetails2: NoteDetailsModule;
+  noteDetails3: NoteDetailsModule;
   
   constructor(private router: Router) {
   // note pad list
@@ -26,16 +29,32 @@ export class NotepadPageComponent implements OnInit {
   this.day = this.note.getDate().toString()
     if(this.day.length<2)
       this.day = "0"+this.day;
-    this.noteDetails = new NoteDetailsModule(
+    this.noteDetails1 = new NoteDetailsModule(
     this.day,
     this.monthsArr[this.note.getMonth()],
     this.title,
     this.body,
     );
+
+    // 2nd object
+    this.noteDetails2 = new NoteDetailsModule(
+      this.day,
+      this.monthsArr[this.note.getMonth()],
+      this.title,
+      this.body,
+      );
+
+      //3rd object
+      this.noteDetails3 = new NoteDetailsModule(
+        this.day,
+        this.monthsArr[this.note.getMonth()],
+        this.title,
+        this.body,
+        );
     console.log(this.noteDetails);  
-    this.notepadListArray.push(this.noteDetails);
-    this.notepadListArray.push(this.noteDetails);
-    this.notepadListArray.push(this.noteDetails);
+    this.notepadListArray.push(this.noteDetails1);
+    this.notepadListArray.push(this.noteDetails2);
+    this.notepadListArray.push(this.noteDetails3);
     console.log(this.notepadListArray);
 
 // const input:any = document.querySelector(".finder__input");
@@ -89,7 +108,7 @@ export class NotepadPageComponent implements OnInit {
       console.log(this.notepadListArray);
     }, 3200);
 
-    var notepadCards: any = optionBtns[index].parentNode;
+    var notepadCards: any = optionBtns[index].parentNode.parentNode;
     console.log(notepadCards);
    
      /*
