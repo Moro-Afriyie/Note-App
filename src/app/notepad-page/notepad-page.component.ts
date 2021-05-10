@@ -90,6 +90,7 @@ export class NotepadPageComponent implements OnInit {
     }, 3200);
 
     var notepadCards: any = optionBtns[index].parentNode;
+    console.log(notepadCards);
    
      /*
      * Execute the delete animation
