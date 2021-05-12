@@ -21,7 +21,7 @@
 
         <div class="form__buttons">
             <button mat-raised-button color="warn">cancel</button>
-            <button mat-raised-button color="primary">Submit</button>
+            <button mat-raised-button color="primary" [disabled]="addNoteForm.invalid">Submit</button>
         </div>
     </form>
 </div>
