@@ -7,15 +7,15 @@
                 <input matInput placeholder="Title goes here...." value="Sushi" formControlName="title">
             </mat-form-field>
             <!--*ngIf="emailFormControl.hasError('required')"-->
-            <mat-error *ngIf="addNoteForm.hasError('required')">
+            <mat-error *ngIf="addNoteForm.get('title').hasError('required')">
                 Title is <strong>required</strong>
             </mat-error>
             <mat-form-field class="form__body">
-                <mat-label>Leave a comment</mat-label>
+                <mat-label>Enter Note</mat-label>
                 <textarea matInput placeholder="Ex. It makes me feel..." formControlName="body"></textarea>
-                <!-- <mat-error *ngIf="addNoteForm.hasError('required')">
-                    Title is <strong>required</strong>
-                </mat-error> -->
+                <mat-error *ngIf="addNoteForm.get('body').hasError('required')">
+                    Note is  <strong>required</strong>
+                </mat-error>
             </mat-form-field>
         </div>
 

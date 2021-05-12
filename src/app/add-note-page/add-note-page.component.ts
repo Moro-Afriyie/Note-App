@@ -22,6 +22,11 @@ export class AddNotePageComponent implements OnInit {
     );
   }
 
+// get the form controls
+  get f(){
+    return this.form.controls;
+  }
+
   onSubmit(): void{
     console.log(this.addNoteForm.value)
 
