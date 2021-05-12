@@ -8,12 +8,22 @@
     border-radius: 8px;
 }
 
-.form-box {
+@mixin flex {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: 1px solid;
+}
+
+.form-box {
+    @include flex();
     // height: 100%;
-    .form__fields {}
+    .form__fields {
+        @include flex();
+        border: 1px solid;
+        .form__title,
+        .form__body {
+            width: 90%;
+        }
+    }
 }
