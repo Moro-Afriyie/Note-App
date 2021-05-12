@@ -1,6 +1,9 @@
+@import '../../styles.scss';
 .addnote-container {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
-    height: 90%;
+    height: 95%;
     background-color: rgb(252, 252, 252);
+    box-shadow: $boxShadow;
+    border-radius: 8px;
 }
