@@ -8,6 +8,7 @@ import { NotepadPageComponent } from './notepad-page/notepad-page.component';
 import { AddNotePageComponent } from './add-note-page/add-note-page.component';
 import { ViewNotePageComponent } from './view-note-page/view-note-page.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TruncatePipe } from './pipes/truncate.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
