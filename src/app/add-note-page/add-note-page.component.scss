@@ -31,6 +31,10 @@
         .form__body {
             width: 90%;
         }
+        mat-label,
+        input {
+            font-family: 'Poppins', sans-serif;
+        }
     }
 }
 
@@ -40,5 +44,6 @@
         margin: 0px 10px;
         width: 110px;
         padding: 5px;
+        font-family: 'Poppins', sans-serif;
     }
 }
