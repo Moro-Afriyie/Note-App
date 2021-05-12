@@ -6,12 +6,14 @@
     background-color: rgb(252, 252, 252);
     box-shadow: $boxShadow;
     border-radius: 8px;
-    .form-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        border: 1px solid;
-        // height: 100%;
-    }
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid;
+    // height: 100%;
+    .form__fields {}
 }
