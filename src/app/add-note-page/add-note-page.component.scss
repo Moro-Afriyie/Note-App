@@ -25,7 +25,7 @@
     // height: 100%;
     .form__fields {
         @include flex();
-        border: 1px solid;
+       
         margin: 20px 0px;
         .form__title,
         .form__body {
