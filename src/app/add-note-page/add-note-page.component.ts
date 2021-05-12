@@ -6,6 +6,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
   templateUrl: './add-note-page.component.html',
   styleUrls: ['./add-note-page.component.scss']
 })
+
 export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
 
