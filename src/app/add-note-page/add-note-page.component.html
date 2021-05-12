@@ -1,21 +1,24 @@
 <div class="addnote-container">
-    <form [formGroup]="addNoteForm" class="add-note-form">
-        <mat-form-field class="add-note-form__title">
-            <mat-label>Title</mat-label>
-            <input matInput placeholder="Title goes here...." value="Sushi" formControlName="title">
-        </mat-form-field>
-        <!--*ngIf="emailFormControl.hasError('required')"-->
-        <mat-error *ngIf="addNoteForm.hasError('required')">
-            Title is <strong>required</strong>
-        </mat-error>
-        <mat-form-field class="add-note-form__body">
-            <mat-label>Leave a comment</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..." formControlName="body"></textarea>
-            <!-- <mat-error *ngIf="addNoteForm.hasError('required')">
+    <form [formGroup]="addNoteForm" class="form-box">
+        <div class="form__fields">
+            <mat-form-field class="form__title">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Title goes here...." value="Sushi" formControlName="title">
+            </mat-form-field>
+            <!--*ngIf="emailFormControl.hasError('required')"-->
+            <mat-error *ngIf="addNoteForm.hasError('required')">
                 Title is <strong>required</strong>
-            </mat-error> -->
-        </mat-form-field>
-        <div class="add-note-form__buttons">
+            </mat-error>
+            <mat-form-field class="form__body">
+                <mat-label>Leave a comment</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..." formControlName="body"></textarea>
+                <!-- <mat-error *ngIf="addNoteForm.hasError('required')">
+                    Title is <strong>required</strong>
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="form__buttons">
             <button mat-raised-button color="warn">cancel</button>
             <button mat-raised-button color="primary">Submit</button>
         </div>
