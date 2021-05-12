@@ -21,7 +21,8 @@ export class AddNotePageComponent implements OnInit {
   }
 
   onSubmit(): void{
-    
+    console.log(this.addNoteForm.value)
+
   }
 
 }
