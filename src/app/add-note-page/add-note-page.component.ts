@@ -20,4 +20,8 @@ export class AddNotePageComponent implements OnInit {
     );
   }
 
+  onSubmit(): void{
+    
+  }
+
 }
