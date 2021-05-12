@@ -6,6 +6,11 @@
     background-color: rgb(252, 252, 252);
     box-shadow: $boxShadow;
     border-radius: 8px;
+    h2 {
+        align-self: center;
+        text-align: center;
+        padding: 10px 0px;
+    }
 }
 
 @mixin flex {
@@ -21,9 +26,18 @@
     .form__fields {
         @include flex();
         border: 1px solid;
+        margin: 20px 0px;
         .form__title,
         .form__body {
             width: 90%;
         }
+    }
+}
+
+.form__buttons {
+    display: flex;
+    button {
+        margin-left: 10px;
+        width: 100px;
     }
 }
