@@ -4,13 +4,13 @@
         <input matInput placeholder="Title" value="Sushi">
     </mat-form-field>
     <!--*ngIf="emailFormControl.hasError('required')"-->
-    <mat-error *ngIf="addNoteForm.title.hasError('required')">
+    <mat-error *ngIf="addNoteForm.hasError('required')">
         Title is <strong>required</strong>
     </mat-error>
     <mat-form-field class="add-note-form__body">
         <mat-label>Leave a comment</mat-label>
         <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-        <mat-error *ngIf="addNoteForm.body.hasError('required')">
+        <mat-error *ngIf="addNoteForm.hasError('required')">
             Title is <strong>required</strong>
         </mat-error>
     </mat-form-field>
