@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-note-page',
@@ -10,7 +11,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.addNoteForm = new FormGroup({
@@ -24,6 +25,10 @@ export class AddNotePageComponent implements OnInit {
   onSubmit(): void{
     console.log(this.addNoteForm.value)
 
+  }
+  onCancel(){
+    // navigate to the main page
+    this.router.navigate(['/']);
   }
 
 }
