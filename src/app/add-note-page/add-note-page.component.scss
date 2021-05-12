@@ -10,6 +10,7 @@
         align-self: center;
         text-align: center;
         padding: 10px 0px;
+        font-family: cursive;
     }
 }
 
@@ -26,7 +27,7 @@
     .form__fields {
         @include flex();
         margin: 20px 0px;
-        gap: 3rem;
+        gap: 1rem;
         .form__title,
         .form__body {
             width: 90%;
@@ -36,8 +37,8 @@
             font-family: 'Poppins', sans-serif;
         }
         .text {
-            height: 40vh;
-            border: 1px solid red;
+            height: 46vh;
+            font-family: 'Poppins', sans-serif;
         }
     }
 }
