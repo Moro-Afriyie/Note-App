@@ -14,7 +14,7 @@
                 <mat-label>Enter Note</mat-label>
                 <textarea matInput placeholder="Ex. It makes me feel..." formControlName="body"></textarea>
                 <mat-error *ngIf="addNoteForm.get('body').hasError('required')">
-                    Note is  <strong>required</strong>
+                    Note is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
         </div>
