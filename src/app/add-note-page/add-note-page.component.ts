@@ -28,7 +28,11 @@ export class AddNotePageComponent implements OnInit {
   }
 
   onSubmit(): void{
-    console.log(this.addNoteForm.value)
+    console.log(this.addNoteForm.value);
+    // update the notpadLists
+    
+    // navigate to the main page
+    this.router.navigate(['/']);
 
   }
   onCancel(){
