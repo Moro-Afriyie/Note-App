@@ -26,6 +26,7 @@
     .form__fields {
         @include flex();
         margin: 20px 0px;
+        gap: 3rem;
         .form__title,
         .form__body {
             width: 90%;
