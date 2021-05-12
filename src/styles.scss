@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
+/***** Angular Material color theme**************/
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 /*********variables************/
 
 @import 'styles/variables.scss';
