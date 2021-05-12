@@ -10,6 +10,7 @@ import { ViewNotePageComponent } from './view-note-page/view-note-page.component
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './models/material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
