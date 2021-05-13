@@ -35,6 +35,7 @@ export class AddNotePageComponent implements OnInit {
     console.log(this.addNoteForm.value);
     // update the notpadLists from the service
     this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body);
+    
     // navigate to the main page
     this.router.navigate(['/']);
 
