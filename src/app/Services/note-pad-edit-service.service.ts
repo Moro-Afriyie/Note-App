@@ -25,7 +25,9 @@ export class NotePadEditServiceService {
     // console.log(this.noteDetails);
   }
   // local storage function
-  
+  saveToLocalStorage(note: NoteDetailsModule[]){
+
+  }
 
   //create a new note
   createNote(title: string, body: string){
