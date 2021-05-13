@@ -32,7 +32,7 @@ export class NotePadEditServiceService {
   //create a new note
   createNote(title: string, body: string){
     this.note = new Date(); // create an object of the date class
-    
+
     this.day = this.note.getDate().toString() // convert the day to string
     if(this.day.length<2)
       this.day = "0"+this.day; // make it double figures if it's a single digit
@@ -60,12 +60,20 @@ export class NotePadEditServiceService {
   }
   
   //edit the notes
-  updateNote(){
+  updateNote(index: number, note: NoteDetailsModule){
+    // update the index with the new note
+    this.noteDetailsArray[index]= note;
 
   }
 
   // delte the note
-  deleteNote(){
+  deleteNote(index: number){
+    this.noteDetailsArray.splice(index, 1); // delete the card
+      this.noteDetailsArray = [...this.noteDetailsArray]; // update the list
+      console.log(this.noteDetailsArray);
+
+      // save to local storage
+      this.saveToLocalStorage(this.noteDetailsArray);
 
   }
 }
