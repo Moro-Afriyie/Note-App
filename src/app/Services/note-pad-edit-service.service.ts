@@ -24,6 +24,8 @@ export class NotePadEditServiceService {
     // );
     // console.log(this.noteDetails);
   }
+  // local storage function
+  
 
   //create a new note
   createNote(title: string, body: string){
