@@ -26,7 +26,7 @@ export class NotePadEditServiceService {
   }
   // local storage function
   saveToLocalStorage(note: NoteDetailsModule[]){
-
+    window.localStorage.setItem("note", JSON.stringify(note));
   }
 
   //create a new note
