@@ -1,3 +1,4 @@
+import { NotePadEditServiceService } from './../Services/note-pad-edit-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {NoteDetailsModule } from '../models/note.model';
@@ -23,7 +24,7 @@ export class NotepadPageComponent implements OnInit {
   noteDetails2: NoteDetailsModule;
   noteDetails3: NoteDetailsModule;
   
-  constructor(private router: Router) {
+  constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) {
   // note pad list
   this.note = new Date();
   this.day = this.note.getDate().toString()
