@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotePadEditServiceService } from '../Services/note-pad-edit-service.service';
 
 @Component({
   selector: 'app-add-note-page',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
 
   ngOnInit(): void {
     this.addNoteForm = new FormGroup({
