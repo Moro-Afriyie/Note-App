@@ -32,9 +32,11 @@ export class NotePadEditServiceService {
   //create a new note
   createNote(title: string, body: string){
     this.note = new Date(); // create an object of the date class
+    
     this.day = this.note.getDate().toString() // convert the day to string
     if(this.day.length<2)
       this.day = "0"+this.day; // make it double figures if it's a single digit
+
     // create an object of the NoteDetailsModule
     this.noteDetails = new NoteDetailsModule(
     this.day,
@@ -42,6 +44,7 @@ export class NotePadEditServiceService {
     title,
     body,
     );
+
     // push it into the array
     this.noteDetailsArray.push(this.noteDetails);
     console.log(this.noteDetailsArray);
