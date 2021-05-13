@@ -1,7 +1,9 @@
+import { NoteDetailsModule } from './../models/note.model';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NotePadEditServiceService } from '../Services/note-pad-edit-service.service';
+import { templateJitUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-add-note-page',
@@ -11,6 +13,7 @@ import { NotePadEditServiceService } from '../Services/note-pad-edit-service.ser
 
 export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
+  noteDetails: NoteDetailsModule;
 
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
 
@@ -31,7 +34,7 @@ export class AddNotePageComponent implements OnInit {
   onSubmit(): void{
     console.log(this.addNoteForm.value);
     // update the notpadLists from the service
-
+    this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body);
     // navigate to the main page
     this.router.navigate(['/']);
 
