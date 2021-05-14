@@ -47,6 +47,7 @@ export class NotePadEditServiceService {
     body,
     );
 
+this.noteDetailsArray = this.getNote();
     // push it into the array
     this.noteDetailsArray.push(this.noteDetails);
     console.log(this.noteDetailsArray);
