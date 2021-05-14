@@ -27,6 +27,7 @@ export class NotepadPageComponent implements OnInit {
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) {
     // get the array from local storage
     this.notepadListArray = JSON.parse(localStorage.getItem("note") || "[]");
+    console.log("notepad list array: ", this.notepadListArray);
   // note pad list
   // this.note = new Date();
   // this.day = this.note.getDate().toString()
