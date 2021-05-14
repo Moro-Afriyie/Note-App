@@ -50,7 +50,7 @@ export class NotePadEditServiceService {
 this.noteDetailsArray = this.getNote();
     // push it into the array
     this.noteDetailsArray.push(this.noteDetails);
-    console.log(this.noteDetailsArray);
+    console.log("note details array from service: ", this.noteDetailsArray);
 
     // store the array in local storage
     this.saveToLocalStorage(this.noteDetailsArray);
