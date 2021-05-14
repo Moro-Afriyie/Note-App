@@ -55,6 +55,9 @@ export class NotePadEditServiceService {
 
   // get the notes
   getNote(){
+    // get the array from local storage
+    this.noteDetailsArray = JSON.parse(localStorage.getItem("notes") || "[]");
+    console.log(this.noteDetailsArray);
     // returns a copy of the array
     return this.noteDetailsArray.slice();
   }
