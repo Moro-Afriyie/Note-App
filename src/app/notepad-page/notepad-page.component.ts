@@ -25,6 +25,8 @@ export class NotepadPageComponent implements OnInit {
   noteDetails3: NoteDetailsModule;
   
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) {
+    // get the array from local storage
+    this.notepadListArray = JSON.parse(localStorage.getItem("notes") || "[]");
   // note pad list
   // this.note = new Date();
   // this.day = this.note.getDate().toString()
@@ -88,8 +90,10 @@ export class NotepadPageComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.notepadListArray = this.notePadEditServcie.getNote();
-    console.log(this.notepadListArray);
+    this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
+      this.notepadListArray = res;
+      console.log("notepad list array: ", this.notepadListArray);
+    })
   }
 
   onCardClicked(){
