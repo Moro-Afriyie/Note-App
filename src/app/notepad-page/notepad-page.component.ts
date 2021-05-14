@@ -93,7 +93,7 @@ export class NotepadPageComponent implements OnInit {
   }
 
   onCardClicked(){
-    this.router.navigate(['/viewNote']);
+    this.router.navigate(['/addNote']);
   }
   onAddNoteClicked(){
     this.router.navigate(['/addNote']);
