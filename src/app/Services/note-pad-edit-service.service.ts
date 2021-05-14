@@ -55,7 +55,6 @@ this.noteDetailsArray = this.getNote();
     // store the array in local storage
     this.saveToLocalStorage(this.noteDetailsArray);
 
-    this.noteDetailsArray = this.getNote();
     this.newNotesCreatedArray.next(this.noteDetailsArray);
   }
 
