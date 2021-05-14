@@ -88,6 +88,8 @@ export class NotepadPageComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.notepadListArray = this.notePadEditServcie.getNote();
+    console.log(this.notepadListArray);
   }
 
   onCardClicked(){
