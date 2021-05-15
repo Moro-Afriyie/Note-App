@@ -33,10 +33,6 @@ export class AddNotePageComponent implements OnInit {
 
   onSubmit(): void{
     console.log(this.addNoteForm.value);
-    let title = this.addNoteForm.value.title;
-    let body = this.addNoteForm.value.body;
-    console.log("title: ", title);
-    console.log("body: ", body);
     // update the notpadLists from the service
     this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body);
     
