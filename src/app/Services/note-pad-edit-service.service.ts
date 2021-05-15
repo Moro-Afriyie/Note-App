@@ -48,6 +48,7 @@ export class NotePadEditServiceService {
     );
 
 this.noteDetailsArray = this.getNote();
+console.log("note details array from service: ", this.noteDetailsArray);
     // push it into the array
     this.noteDetailsArray.push(this.noteDetails);
     console.log("note details array from service: ", this.noteDetailsArray);
@@ -61,7 +62,7 @@ this.noteDetailsArray = this.getNote();
   // get the notes
   getNote(){
     // get the array from local storage
-    this.noteDetailsArray = JSON.parse(localStorage.getItem("notes") || "[]");
+    this.noteDetailsArray = JSON.parse(localStorage.getItem("note") || "[]");
     console.log(this.noteDetailsArray);
     // returns a copy of the array
     return this.noteDetailsArray.slice();
