@@ -110,9 +110,9 @@ export class NotepadPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
-      this.updatedArray.push(res);
-      console.log("updated list array: ", this.updatedArray);
-      this.notepadListArray = this.updatedArray.slice();
+      this.notepadListArray.push(res);
+      // console.log("updated list array: ", this.updatedArray);
+      // this.notepadListArray = this.updatedArray.slice();
     console.log("notepad list array: ", this.notepadListArray);
     });
     
