@@ -95,6 +95,10 @@ export class NotepadPageComponent implements OnInit {
 //     }
 //   }, 1000);
 // });
+this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
+  this.notepadListArray.push(res);
+  console.log("notepad list array: ", this.notepadListArray);
+})
    }
 
   ngOnInit(): void {
