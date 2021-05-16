@@ -16,7 +16,12 @@ export class NotepadPageComponent implements OnInit {
   // array to store a copy of  the notepadLists
   notepadListArray: NoteDetailsModule[]=[];
   // array to update the new array
-  updatedArray: NoteDetailsModule[]=[];
+  updatedArray: NoteDetailsModule[]=[
+    new NoteDetailsModule("10", "Mar", "Title1", this.body),
+    new NoteDetailsModule("11", "Apr", "Title2", this.body),
+    new NoteDetailsModule("12", "May", "Title3", this.body),
+  ];
+  
   note: Date;
   private day: string;
   //Date array
@@ -101,9 +106,10 @@ export class NotepadPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
-      this.notepadListArray.push(res);
+      this.updatedArray.push(res);
       console.log("notepad list array: ", this.notepadListArray);
-    })
+    });
+    this.notepadListArray = this.updatedArray.slice();
   }
 
   onCardClicked(){
