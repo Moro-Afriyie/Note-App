@@ -17,6 +17,7 @@ export class NotepadPageComponent implements OnInit {
   notepadListArray: NoteDetailsModule[]=[
     new NoteDetailsModule("10", "May", "Title1", this.body),
     new NoteDetailsModule("11", "May", "Title2", this.body),
+    new NoteDetailsModule("11", "May", "Title2", this.body),
 
   ];
   note: Date;
