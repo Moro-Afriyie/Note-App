@@ -6,9 +6,10 @@ import {NoteDetailsModule } from '../models/note.model';
   providedIn: 'root'
 })
 export class NotePadEditServiceService {
+  body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus.";
 
   // fields
-  private noteDetailsArray: NoteDetailsModule[
+  private noteDetailsArray: NoteDetailsModule[]=[
     new NoteDetailsModule("10", "Mar", "Title1", this.body),
     new NoteDetailsModule("11", "Apr", "Title2", this.body),
     new NoteDetailsModule("12", "May", "Title3", this.body),
