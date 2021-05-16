@@ -9,71 +9,11 @@ import {NoteDetailsModule } from '../models/note.model';
   styleUrls: ['./notepad-page.component.scss']
 })
 export class NotepadPageComponent implements OnInit {
-  body: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quibusdam accusantium nemo illo quas? Maiores minima veritatis laborum deleniti, tempora vero ipsum! Sequi unde nostrum minus cum, dolor dolores temporibus.";
-  title: string = "Title";
-  // fields
-  noteDetails: NoteDetailsModule;
   // array to store a copy of  the notepadLists
-  notepadListArray: NoteDetailsModule[]=[
-    // new NoteDetailsModule("10", "Mar", "Title1", this.body),
-    // new NoteDetailsModule("11", "Apr", "Title2", this.body),
-    // new NoteDetailsModule("12", "May", "Title3", this.body),
-  ];
-  // // array to update the new array
-  // updatedArray: NoteDetailsModule[]=[
-  //   new NoteDetailsModule("10", "Mar", "Title1", this.body),
-  //   new NoteDetailsModule("11", "Apr", "Title2", this.body),
-  //   new NoteDetailsModule("12", "May", "Title3", this.body),
-  // ];
+  notepadListArray: NoteDetailsModule[]=[];
   
-  note: Date;
-  private day: string;
-  //Date array
-  monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', "May", 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-  ]
-  noteDetails1: NoteDetailsModule;
-  noteDetails2: NoteDetailsModule;
-  noteDetails3: NoteDetailsModule;
   
   constructor(private router: Router, private notePadEditService: NotePadEditServiceService) {
-    // get the array from local storage
-    // window.localStorage.clear(); //try this to clear all local storage
-    // this.notepadListArray = JSON.parse(localStorage.getItem("note") || "[]");
-    // console.log("notepad list array: ", this.notepadListArray);
-    
-
-  // note pad list
-  // this.note = new Date();
-  // this.day = this.note.getDate().toString()
-  //   if(this.day.length<2)
-  //     this.day = "0"+this.day;
-  //   this.noteDetails1 = new NoteDetailsModule(
-  //   this.day,
-  //   this.monthsArr[this.note.getMonth()],
-  //   this.title,
-  //   this.body,
-  //   );
-
-  //   // 2nd object
-  //   this.noteDetails2 = new NoteDetailsModule(
-  //     this.day,
-  //     this.monthsArr[this.note.getMonth()],
-  //     this.title,
-  //     this.body,
-  //     );
-
-  //     //3rd object
-  //     this.noteDetails3 = new NoteDetailsModule(
-  //       this.day,
-  //       this.monthsArr[this.note.getMonth()],
-  //       this.title,
-  //       this.body,
-  //       );
-  //   console.log(this.noteDetails);  
-  //   this.notepadListArray.push(this.noteDetails1);
-  //   this.notepadListArray.push(this.noteDetails2);
-  //   this.notepadListArray.push(this.noteDetails3);
-  //   console.log(this.notepadListArray);
 
 // const input:any = document.querySelector(".finder__input");
 // const finder:any = document.querySelector(".finder");
