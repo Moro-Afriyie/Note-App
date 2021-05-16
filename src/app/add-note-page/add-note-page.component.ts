@@ -19,8 +19,8 @@ export class AddNotePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.addNoteForm = new FormGroup({
-      title:  new FormControl(" ", Validators.required),
-      body: new FormControl(" ", Validators.required)
+      title:  new FormControl('', Validators.required),
+      body: new FormControl('', Validators.required)
     }
      
     );
@@ -34,7 +34,7 @@ export class AddNotePageComponent implements OnInit {
   onSubmit(): void{
     console.log(this.addNoteForm.value);
     // update the notpadLists from the service
-    this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body);
+    this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body.toString());
     
     // navigate to the main page
     this.router.navigate(['/']);
