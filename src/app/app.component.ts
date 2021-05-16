@@ -11,6 +11,7 @@ export class AppComponent {
   constructor(private router: Router){}
 
   ngOnInit(): void {
-  // this.router.navigate(['/addNote'])
+    // automatic routing to the addNote page when the page Loads
+  // this.router.navigate(['/addNote']);
   }
 }
