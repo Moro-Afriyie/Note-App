@@ -35,7 +35,7 @@ export class NotepadPageComponent implements OnInit {
   noteDetails2: NoteDetailsModule;
   noteDetails3: NoteDetailsModule;
   
-  constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) {
+  constructor(private router: Router, private notePadEditService: NotePadEditServiceService) {
     // get the array from local storage
     // window.localStorage.clear(); //try this to clear all local storage
     // this.notepadListArray = JSON.parse(localStorage.getItem("note") || "[]");
@@ -109,12 +109,14 @@ export class NotepadPageComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
-      this.notepadListArray.push(res);
-      // console.log("updated list array: ", this.updatedArray);
-      // this.notepadListArray = this.updatedArray.slice();
-    console.log("notepad list array: ", this.notepadListArray);
-    });
+    // this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
+    //   this.notepadListArray.push(res);
+    //   // console.log("updated list array: ", this.updatedArray);
+    //   // this.notepadListArray = this.updatedArray.slice();
+    // console.log("notepad list array: ", this.notepadListArray);
+    // });
+
+    this.notepadListArray =  this.notePadEditService.getNote();
     
   }
 
