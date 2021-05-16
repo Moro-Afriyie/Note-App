@@ -14,11 +14,7 @@ export class NotepadPageComponent implements OnInit {
   // fields
   noteDetails: NoteDetailsModule;
   // array to store a copy of  the notepadLists
-  notepadListArray: NoteDetailsModule[]=[
-    new NoteDetailsModule("10", "Mar", "Title1", this.body),
-    new NoteDetailsModule("11", "Apr", "Title2", this.body),
-    new NoteDetailsModule("12", "May", "Title3", this.body),
-  ];
+  notepadListArray: NoteDetailsModule[]=[];
   // array to update the new array
   updatedArray: NoteDetailsModule[]=[];
   note: Date;
