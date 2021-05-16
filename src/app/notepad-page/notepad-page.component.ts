@@ -19,6 +19,8 @@ export class NotepadPageComponent implements OnInit {
     new NoteDetailsModule("11", "Apr", "Title2", this.body),
     new NoteDetailsModule("12", "May", "Title3", this.body),
   ];
+  // array to update the new array
+  updatedArray: NoteDetailsModule[]=[];
   note: Date;
   private day: string;
   //Date array
