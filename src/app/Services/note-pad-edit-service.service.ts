@@ -47,16 +47,16 @@ export class NotePadEditServiceService {
     body,
     );
 
-this.noteDetailsArray = this.getNote();
+// this.noteDetailsArray = this.getNote();
 console.log("note details array from service: ", this.noteDetailsArray);
     // push it into the array
     this.noteDetailsArray.push(this.noteDetails);
     console.log("note details array from service: ", this.noteDetailsArray);
 
     // store the array in local storage
-    this.saveToLocalStorage(this.noteDetailsArray);
+    // this.saveToLocalStorage(this.noteDetailsArray);
 
-    this.newNotesCreatedArray.next(this.noteDetailsArray);
+    this.newNotesCreatedArray.next(this.noteDetails);
   }
 
   // get the notes
