@@ -14,7 +14,11 @@ export class NotepadPageComponent implements OnInit {
   // fields
   noteDetails: NoteDetailsModule;
   // array to store a copy of  the notepadLists
-  notepadListArray: NoteDetailsModule[]=[];
+  notepadListArray: NoteDetailsModule[]=[
+    new NoteDetailsModule("10", "Mar", "Title1", this.body),
+    new NoteDetailsModule("11", "Apr", "Title2", this.body),
+    new NoteDetailsModule("12", "May", "Title3", this.body),
+  ];
   // array to update the new array
   updatedArray: NoteDetailsModule[]=[
     new NoteDetailsModule("10", "Mar", "Title1", this.body),
@@ -108,9 +112,10 @@ export class NotepadPageComponent implements OnInit {
     this.notePadEditServcie.newNotesCreatedArray.subscribe(res=>{
       this.updatedArray.push(res);
       console.log("updated list array: ", this.updatedArray);
-    });
-    this.notepadListArray = this.updatedArray.slice();
+      this.notepadListArray = this.updatedArray.slice();
     console.log("notepad list array: ", this.notepadListArray);
+    });
+    
   }
 
   onCardClicked(){
