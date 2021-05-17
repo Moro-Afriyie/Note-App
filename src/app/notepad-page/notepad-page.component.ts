@@ -68,6 +68,9 @@ export class NotepadPageComponent implements OnInit {
     finder.classList.add("active");
 
   }
+
+  // blur event listener
+  
   onCardClicked(){
     this.router.navigate(['/addNote']);
   }
