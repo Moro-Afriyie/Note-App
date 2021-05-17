@@ -191,7 +191,6 @@ form {
             flex-grow: 1;
             padding: 8px 10px;
             border-radius: 15px;
-            width: 55vw;
         }
         .card__body {
             flex-grow: 1;
@@ -246,8 +245,9 @@ form {
 
 .truncate {
     overflow: hidden;
-    width: 90%; //can also use calc function as per Yudi's answer
+    // width: 90%; //can also use calc function as per Yudi's answer
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 47vw;
 }
