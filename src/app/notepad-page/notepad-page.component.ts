@@ -70,6 +70,9 @@ export class NotepadPageComponent implements OnInit {
   }
 
   // blur event listener
+  onBlur(){
+    
+  }
   
   onCardClicked(){
     this.router.navigate(['/addNote']);
