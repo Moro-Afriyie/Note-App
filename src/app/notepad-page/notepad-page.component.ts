@@ -62,6 +62,9 @@ export class NotepadPageComponent implements OnInit {
 
   // when the user focuses on the input
   onFocus(){
+    const input:any = document.querySelector(".finder__input");
+    const finder:any = document.querySelector(".finder");
+    const form:any = document.querySelector("form");
 
   }
   onCardClicked(){
