@@ -11,6 +11,9 @@ import {NoteDetailsModule } from '../models/note.model';
 export class NotepadPageComponent implements OnInit {
   // array to store a copy of  the notepadLists
   notepadListArray: NoteDetailsModule[]=[];
+  input:any = document.querySelector(".finder__input");
+  finder:any = document.querySelector(".finder");
+  form:any = document.querySelector("form");
   
   
   constructor(private router: Router, private notePadEditService: NotePadEditServiceService) {
@@ -62,12 +65,11 @@ export class NotepadPageComponent implements OnInit {
 
   // when the user focuses on the input
   onFocus(){
-    const input:any = document.querySelector(".finder__input");
-    const finder:any = document.querySelector(".finder");
-    const form:any = document.querySelector("form");
-    finder.classList.add("active");
+    this.finder.classList.add("active");
 
   }
+
+  // when a user clicks on the card
   onCardClicked(){
     this.router.navigate(['/addNote']);
   }
