@@ -60,6 +60,10 @@ export class NotepadPageComponent implements OnInit {
     
   }
 
+  // when the user focuses on the input
+  onFocus(){
+
+  }
   onCardClicked(){
     this.router.navigate(['/addNote']);
   }
