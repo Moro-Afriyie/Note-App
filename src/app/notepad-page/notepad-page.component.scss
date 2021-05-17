@@ -245,7 +245,6 @@ form {
 
 .truncate {
     overflow: hidden;
-    // width: 90%; //can also use calc function as per Yudi's answer
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
