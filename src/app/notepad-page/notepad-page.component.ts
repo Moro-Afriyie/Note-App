@@ -65,6 +65,7 @@ export class NotepadPageComponent implements OnInit {
     const input:any = document.querySelector(".finder__input");
     const finder:any = document.querySelector(".finder");
     const form:any = document.querySelector("form");
+    finder.classList.add("active");
 
   }
   onCardClicked(){
