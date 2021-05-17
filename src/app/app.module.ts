@@ -10,6 +10,7 @@ import { TruncatePipe } from './pipes/truncate.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './models/material.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AngularMaterialModule } from './models/material.module';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
