@@ -13,6 +13,8 @@ export class NotePadEditServiceService {
     new NoteDetailsModule("10", "Mar", "Title1", this.body),
     new NoteDetailsModule("11", "Apr", "Title2", this.body),
     new NoteDetailsModule("12", "May", "Title3", this.body),
+    new NoteDetailsModule("12", "May", "Title3",  "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"),
+   
   ];
   private note: Date;
   //Date array
