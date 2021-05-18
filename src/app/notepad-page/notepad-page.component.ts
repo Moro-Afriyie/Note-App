@@ -86,13 +86,13 @@ export class NotepadPageComponent implements OnInit {
     finder.classList.remove("active");
     // remove the classes
     input.disabled = true;
-//   setTimeout(() => {
-//     finder.classList.remove("processing");
-//     input.disabled = false;
-//     if (input.value.length > 0) {
-//       finder.classList.add("active");
-//     }
-//   }, 1000);
+  setTimeout(() => {
+    finder.classList.remove("processing");
+    input.disabled = false;
+    if (input.value.length > 0) {
+      finder.classList.add("active");
+    }
+  }, 1000);
 
   }
   
