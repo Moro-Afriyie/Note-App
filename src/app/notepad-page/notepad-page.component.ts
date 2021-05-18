@@ -77,6 +77,11 @@ export class NotepadPageComponent implements OnInit {
 //   }
 // }); 
   }
+
+  // keyUp event function
+  onKeyUp(){
+
+  }
   
   onCardClicked(){
     this.router.navigate(['/addNote']);
