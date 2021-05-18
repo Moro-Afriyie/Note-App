@@ -80,6 +80,7 @@ export class NotepadPageComponent implements OnInit {
 
   // keyUp event function
   onKeyUp(){
+    console.log("keyup");
 
   }
   
