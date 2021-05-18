@@ -81,6 +81,9 @@ export class NotepadPageComponent implements OnInit {
   // keyUp event function
   onKeyUp(){
     console.log("keyup");
+    const finder:any = document.querySelector(".finder");
+    finder.classList.add("processing");
+    finder.classList.remove("active");
 
   }
   
