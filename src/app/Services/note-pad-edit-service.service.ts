@@ -24,14 +24,6 @@ export class NotePadEditServiceService {
   noteDetails: NoteDetailsModule;
   newNotesCreatedArray = new Subject<NoteDetailsModule>(); // subject to transfer the data from the service to the other components
   constructor(){
-    // this.note = new Date();
-    // this.noteDetails = new NoteDetailsModule(
-    // this.note.getDate(),
-    // this.monthsArr[this.note.getMonth()],
-    // "Moro",
-    // "lorem ipsum"
-    // );
-    // console.log(this.noteDetails);
   }
   // local storage function
   saveToLocalStorage(note: NoteDetailsModule[]){
@@ -63,7 +55,7 @@ export class NotePadEditServiceService {
     // store the array in local storage
     // this.saveToLocalStorage(this.noteDetailsArray);
 
-    this.newNotesCreatedArray.next(this.noteDetails);
+    // this.newNotesCreatedArray.next(this.noteDetails);
   }
 
   // get the notes
