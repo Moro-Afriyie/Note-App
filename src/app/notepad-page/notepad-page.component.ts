@@ -71,6 +71,7 @@ export class NotepadPageComponent implements OnInit {
 
   // blur event listener
   onBlur(){
+    const input:any = document.querySelector(".finder__input");
     // input.addEventListener("blur", () => {
 //   if (input.value.length === 0) {
 //     finder.classList.remove("active");
