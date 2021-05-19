@@ -13,6 +13,7 @@ import { AngularMaterialModule } from './models/material.module';
 import { CommonModule } from '@angular/common';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HighlightTextPipe } from './pipes/highlight-text.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HighlightTextPipe } from './pipes/highlight-text.pipe';
     AddNotePageComponent,
     TruncatePipe,
     FilterPipe,
-    HighlightTextPipe
+    HighlightTextPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
