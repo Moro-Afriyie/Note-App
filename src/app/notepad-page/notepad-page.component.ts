@@ -13,37 +13,7 @@ export class NotepadPageComponent implements OnInit {
   notepadListArray: NoteDetailsModule[]=[];
   searchText='';
   
-  constructor(private router: Router, private notePadEditService: NotePadEditServiceService) {
-
-// const input:any = document.querySelector(".finder__input");
-// const finder:any = document.querySelector(".finder");
-// const form:any = document.querySelector("form");
-
-// input.addEventListener("focus", () => {
-//   finder.classList.add("active");
-// });
-
-// input.addEventListener("blur", () => {
-//   if (input.value.length === 0) {
-//     finder.classList.remove("active");
-//   }
-// }); 
-
-// form.addEventListener("submit", (ev) => {
-//   ev.preventDefault();
-//   finder.classList.add("processing");
-//   finder.classList.remove("active");
-//   input.disabled = true;
-//   setTimeout(() => {
-//     finder.classList.remove("processing");
-//     input.disabled = false;
-//     if (input.value.length > 0) {
-//       finder.classList.add("active");
-//     }
-//   }, 1000);
-// });
-
-   }
+  constructor(private router: Router, private notePadEditService: NotePadEditServiceService) {}
 
   ngOnInit(): void {
     this.notepadListArray =  this.notePadEditService.getNote();
@@ -52,9 +22,7 @@ export class NotepadPageComponent implements OnInit {
 
   // when the user focuses on the input
   onFocus(){
-    const input:any = document.querySelector(".finder__input");
     const finder:any = document.querySelector(".finder");
-    const form:any = document.querySelector("form");
     finder.classList.add("active");
 
   }
@@ -74,11 +42,8 @@ export class NotepadPageComponent implements OnInit {
     const finder:any = document.querySelector(".finder");
     finder.classList.add("processing");
     finder.classList.remove("active");
-    // remove the classes
-    // input.disabled = true; 
   setTimeout(() => {
     finder.classList.remove("processing");
-    // input.disabled = false;
     if (input.value.length > 0) {
       finder.classList.add("active");
     }
