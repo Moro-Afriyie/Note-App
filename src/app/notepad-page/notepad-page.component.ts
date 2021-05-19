@@ -47,7 +47,7 @@ export class NotepadPageComponent implements OnInit {
     if (input.value.length > 0) {
       finder.classList.add("active");
     }
-  }, 1000);
+  }, 700);
 
   }
   
