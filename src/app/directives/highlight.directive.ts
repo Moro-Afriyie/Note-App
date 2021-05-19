@@ -11,4 +11,22 @@ export class HighlightDirective {
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (!this.content) {
+      return;
+    }
+
+    if (this.setTitle) {
+      this.renderer.setProperty(
+        this.el.nativeElement,
+        'title',
+        this.content
+      );
+    }
+
+    if (!this.searchedWord || !this.searchedWord.length || !this.classToApply) {
+      this.renderer.setProperty(this.el.nativeElement, 'innerHTML', this.content);
+      return;
+    }
+
 }
