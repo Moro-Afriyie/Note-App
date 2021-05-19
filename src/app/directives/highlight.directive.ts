@@ -10,7 +10,11 @@ export class HighlightDirective implements OnChanges{
   @Input() setTitle = false; //sets title attribute of HTML
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
-
+/**
+ * The logic is to manipulate the current HTML element by 
+ * adding <span> tag in between the searchText and applying
+ *  the highlighting class to it.
+ */
   ngOnChanges(changes: SimpleChanges): void {
     if (!this.content) {
       return;
