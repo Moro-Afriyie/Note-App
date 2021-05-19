@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './models/material.module';
 import { CommonModule } from '@angular/common';
 import { FilterPipe } from './pipes/filter.pipe';
+import { HighlightTextPipe } from './pipes/highlight-text.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     NotepadPageComponent,
     AddNotePageComponent,
     TruncatePipe,
-    FilterPipe
+    FilterPipe,
+    HighlightTextPipe
   ],
   imports: [
     BrowserModule,
