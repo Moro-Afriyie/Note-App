@@ -20,8 +20,8 @@
                         <p class="card__date__month">{{noteDetails.month}}</p>
                     </div>
                     <div class="card__content">
-                        <h3 class="card__title">{{noteDetails.title}}</h3>
-                        <p class="card__body" [class.truncate]="noteDetails.body.split(' ').length==1?true: false">{{noteDetails.body| truncate : 110}}</p>
+                        <h3 class="card__title" appHighlight [searchedWord]="searchText" [content]="noteDetails.title" [classToApply]="'font-weight-bold'" [setTitle]="true">{{noteDetails.title}}</h3>
+                        <p class="card__body" [class.truncate]="noteDetails.body.split(' ').length==1?true: false" appHighlight [searchedWord]="searchText" [content]="noteDetails.body" [classToApply]="'font-weight-bold'" [setTitle]="true">{{noteDetails.body| truncate : 110}}</p>
                     </div>
                 </div>
                 <div class="card__item__option delete js-option" (click)="onDeleteNote(index)">
