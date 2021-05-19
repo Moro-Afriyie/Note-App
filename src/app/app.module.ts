@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './models/material.module';
 import { CommonModule } from '@angular/common';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommonModule } from '@angular/common';
     MainPageComponent,
     NotepadPageComponent,
     AddNotePageComponent,
-    TruncatePipe
+    TruncatePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
