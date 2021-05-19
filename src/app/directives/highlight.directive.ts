@@ -9,6 +9,6 @@ export class HighlightDirective {
   @Input() classToApply: string; //class to apply for highlighting
   @Input() setTitle = false; //sets title attribute of HTML
 
-  constructor() { }
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
 }
