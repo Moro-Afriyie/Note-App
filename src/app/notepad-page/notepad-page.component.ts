@@ -11,7 +11,7 @@ import {NoteDetailsModule } from '../models/note.model';
 export class NotepadPageComponent implements OnInit {
   // array to store a copy of  the notepadLists
   notepadListArray: NoteDetailsModule[]=[];
-  
+  searchText='';
   
   constructor(private router: Router, private notePadEditService: NotePadEditServiceService) {
 
