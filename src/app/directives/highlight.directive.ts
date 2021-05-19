@@ -28,5 +28,6 @@ export class HighlightDirective {
       this.renderer.setProperty(this.el.nativeElement, 'innerHTML', this.content);
       return;
     }
+  }
 
 }
