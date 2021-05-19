@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { NoteDetailsModule } from '../models/note.model';
 
 @Pipe({
   name: 'filter'
@@ -12,7 +13,7 @@ export class FilterPipe implements PipeTransform {
    * @param {string} searchText
    * @returns {any[]}
    */
-   transform(items: any[], searchText: string): any[] {
+   transform(items: NoteDetailsModule[], searchText: string): any[] {
     if (!items) {
       return [];
     }
@@ -22,7 +23,7 @@ export class FilterPipe implements PipeTransform {
     searchText = searchText.toLocaleLowerCase();
 
     return items.filter(it => {
-      return it.toLocaleLowerCase().includes(searchText);
+      return it.title.toLocaleLowerCase().includes(searchText);
     });
   }
 
