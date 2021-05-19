@@ -7,7 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NotepadPageComponent } from './notepad-page/notepad-page.component';
 import { AddNotePageComponent } from './add-note-page/add-note-page.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './models/material.module';
 import { CommonModule } from '@angular/common';
@@ -29,6 +29,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     BrowserAnimationsModule,
     AngularMaterialModule,
     CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
