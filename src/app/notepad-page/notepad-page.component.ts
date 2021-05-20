@@ -52,7 +52,7 @@ export class NotepadPageComponent implements OnInit {
   }
   
   // View and Edit the note
-  onCardClicked(){
+  onCardClicked(index: number, note: NoteDetailsModule){
     this.router.navigate(['/addNote']);
   }
   onAddNoteClicked(){
