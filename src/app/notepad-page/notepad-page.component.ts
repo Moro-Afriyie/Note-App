@@ -65,9 +65,6 @@ export class NotepadPageComponent implements OnInit {
 
      // set setTimeout to allow the deletion to happen
      setTimeout(() => {
-      // this.notepadListArray.splice(index, 1); // delete the card
-      // this.notepadListArray = [...this.notepadListArray]; // update the list
-      // console.log(this.notepadListArray);
       this.notePadEditService.deleteNote(index);
     }, 3200);
 
