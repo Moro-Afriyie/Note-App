@@ -24,7 +24,7 @@ export class NotePadEditServiceService {
   noteDetails: NoteDetailsModule;
   // newNotesCreatedArray = new Subject<NoteDetailsModule>(); // subject to transfer the data from the service to the other components
   constructor(){
-    localStorage.setItem("note", JSON.stringify(this.noteDetailsArray));
+    // localStorage.setItem("note", JSON.stringify(this.noteDetailsArray));
   }
   // local storage function
   saveToLocalStorage(note: NoteDetailsModule[]){
