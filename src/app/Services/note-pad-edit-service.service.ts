@@ -90,7 +90,7 @@ export class NotePadEditServiceService {
 
   }
   sendNoteDetails(edit: boolean, index:number, note: NoteDetailsModule){
-    this. editNote.next({edit, index, note});
+    this.editNote.next({edit, index, note});
 
   }
 }
