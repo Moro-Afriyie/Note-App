@@ -54,6 +54,7 @@ export class NotepadPageComponent implements OnInit {
   // View and Edit the note
   onCardClicked(index: number, note: NoteDetailsModule){
     this.notePadEditService.sendNoteDetails(true, index, note);
+    console.log("card clicked");
     this.router.navigate(['/addNote']);
   }
   onAddNoteClicked(){
