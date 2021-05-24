@@ -29,13 +29,12 @@ export class AddNotePageComponent implements OnInit {
      
     );
     this.notePadEditServcie.editNote.subscribe(res =>{
+      console.log(res);
       this.edit = res.edit;
       this.index = res.index;
-      this.addNoteForm.value.title = res.note.title;
-      this.addNoteForm.value.body = res.note.body;
+      this.addNoteForm.value.title.setValue(res.note.title);
+      this.addNoteForm.value.body.setValue(res.note.body);
        console.log("index: ", this.index );
-      //  console.log("body: ", this.body);
-      //  console.log("title: ", this.title);
        console.log("edit: ", this.edit);
 
 });
