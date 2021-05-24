@@ -22,7 +22,7 @@ export class NotePadEditServiceService {
   ]
   day: string;
   noteDetails: NoteDetailsModule;
-  editNote = new Subject<{index:number, note: NoteDetailsModule}>(); // subject to transfer the data from the service to the other components
+  editNote = new Subject<{edit: boolean, index:number, note: NoteDetailsModule}>(); // subject to transfer the data from the service to the other components
   constructor(){
     // localStorage.setItem("note", JSON.stringify(this.noteDetailsArray));
   }
@@ -89,8 +89,8 @@ export class NotePadEditServiceService {
       this.saveToLocalStorage(this.noteDetailsArray);
 
   }
-  sendNoteDetails(index:number, note: NoteDetailsModule){
-    this. editNote.next({index, note});
+  sendNoteDetails(edit: boolean, index:number, note: NoteDetailsModule){
+    this. editNote.next({edit, index, note});
 
   }
 }
