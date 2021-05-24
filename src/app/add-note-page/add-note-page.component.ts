@@ -22,23 +22,23 @@ export class AddNotePageComponent implements OnInit {
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
 
   ngOnInit(): void {
-    this.notePadEditServcie.editNote.subscribe(res =>{
-          this.edit = res.edit;
-          this.index = res.index;
-          this.title = res.note.title;
-          this.body = res.note.body;
-           console.log("index: ", this.index );
-           console.log("body: ", this.body);
-           console.log("title: ", this.title);
-           console.log("edit: ", this.edit);
-
-    });
     this.addNoteForm = new FormGroup({
       title:  new FormControl('', Validators.required),
       body: new FormControl('', Validators.required)
     }
      
     );
+    this.notePadEditServcie.editNote.subscribe(res =>{
+      this.edit = res.edit;
+      this.index = res.index;
+      this.addNoteForm.value.title = res.note.title;
+      this.addNoteForm.value.body = res.note.body;
+       console.log("index: ", this.index );
+       console.log("body: ", this.body);
+       console.log("title: ", this.title);
+       console.log("edit: ", this.edit);
+
+});
   }
 
 // get the form controls
