@@ -4,14 +4,14 @@
         <div class="form__fields">
             <mat-form-field class="form__title">
                 <mat-label>Title</mat-label>
-                <input matInput [(ngModel)]="title" placeholder="Title goes here...." value="Sushi" formControlName="title">
+                <input matInput placeholder="Title goes here...." value="Sushi" formControlName="title">
                 <mat-error *ngIf="addNoteForm.get('title').hasError('required')">
                     Title is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
             <mat-form-field class="form__body">
                 <mat-label>Enter Note</mat-label>
-                <textarea matInput [(ngModel)]="body" placeholder="Ex. It makes me feel..." formControlName="body" class="text"></textarea>
+                <textarea matInput  placeholder="Ex. It makes me feel..." formControlName="body" class="text"></textarea>
                 <mat-error *ngIf="addNoteForm.get('body').hasError('required')">
                     Note is <strong>required</strong>
                 </mat-error>
