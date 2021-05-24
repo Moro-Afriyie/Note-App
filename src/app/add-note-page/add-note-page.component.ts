@@ -30,12 +30,12 @@ export class AddNotePageComponent implements OnInit {
     );
     this.notePadEditServcie.editNote.subscribe(res =>{
       console.log(res);
-      // this.edit = res.edit;
-      // this.index = res.index;
-      // this.addNoteForm.value.title.setValue(res.note.title);
-      // this.addNoteForm.value.body.setValue(res.note.body);
-      //  console.log("index: ", this.index );
-      //  console.log("edit: ", this.edit);
+      this.edit = res.edit;
+      this.index = res.index;
+      this.addNoteForm.value.title.setValue(res.note.title);
+      this.addNoteForm.value.body.setValue(res.note.body);
+       console.log("index: ", this.index );
+       console.log("edit: ", this.edit);
 
 });
   }
@@ -62,7 +62,7 @@ export class AddNotePageComponent implements OnInit {
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
-    this.notePadEditServcie.editNote.unsubscribe();
+    // this.notePadEditServcie.editNote.unsubscribe();
   }
 
 }
