@@ -89,6 +89,8 @@ export class NotePadEditServiceService {
       this.saveToLocalStorage(this.noteDetailsArray);
 
   }
-  
+  sendNoteDetails(index:number, note: NoteDetailsModule){
+    
+  }
 }
 
