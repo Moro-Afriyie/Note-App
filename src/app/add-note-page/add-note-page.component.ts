@@ -17,12 +17,17 @@ export class AddNotePageComponent implements OnInit {
   header='';
   content = '';
   index:number;
-  edit: boolean = false;
+  edit: boolean; //= false;
 
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
 
   ngOnInit(): void {
-    this.notePadEditServcie.editNote.subscribe(res =>{
+  this.addNoteForm = new FormGroup({
+      title:  new FormControl(null, Validators.required),
+      body: new FormControl(null, Validators.required)
+    }
+    );
+  this.notePadEditServcie.editNote.subscribe(res =>{
       console.log(res);
       this.edit = res.edit;
       // this.index = res.index;
@@ -31,24 +36,20 @@ export class AddNotePageComponent implements OnInit {
       // this.addNoteForm.value.body.setValue(res.note.body);
       // console.log(this.addNoteForm.value);
       //  console.log("index: ", this.index );
-      //  console.log("edit: ", this.edit);
+      console.log("edit: ", this.edit);
+      if(this.edit){
+       this.addNoteForm = new FormGroup({
+         title:  new FormControl('ony3', Validators.required),
+         body: new FormControl('ots3', Validators.required)
+       }
+       );
+      }
+    });
+      
 
-});
-  if(this.edit){
-    this.addNoteForm = new FormGroup({
-      title:  new FormControl('ony3', Validators.required),
-      body: new FormControl('ots3', Validators.required)
-    }
-    );
-  }
-  else{
-    this.addNoteForm = new FormGroup({
-      title:  new FormControl(null, Validators.required),
-      body: new FormControl(null, Validators.required)
-    }
-    );
-  }
-  }
+};
+
+ 
 
 // get the form controls
   get f(){
