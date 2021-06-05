@@ -14,8 +14,8 @@ import { templateJitUrl } from '@angular/compiler';
 export class AddNotePageComponent implements OnInit {
   // addNoteForm: FormGroup;
   noteDetails: NoteDetailsModule;
-  title='';
-  body = '';
+  header='';
+  content = '';
   index:number;
   edit: boolean = false;
 
