@@ -30,14 +30,14 @@
             <mat-form-field class="form__title">
                 <mat-label>Title</mat-label>
                 <input matInput placeholder="Title goes here...." value="Sushi" name="title" [(ngModel)]="title" #title="ngModel" required>
-                <mat-error *ngIf="!title.valid && (title.dirty|| title.touched)">
+                <mat-error *ngIf="title.errors.required">
                     Title is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
             <mat-form-field class="form__body">
                 <mat-label>Enter Note</mat-label>
                 <textarea matInput placeholder="Ex. It makes me feel..." name="body" [(ngModel)]="body" class="text" #body="ngModel" required></textarea>
-                <mat-error *ngIf="addNoteForm.get('body').hasError('required')">
+                <mat-error *ngIf="body.errors.required">
                     Note is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
