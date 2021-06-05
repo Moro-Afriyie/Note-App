@@ -92,7 +92,6 @@ export class NotePadEditServiceService {
   sendNoteDetails(edit: boolean, index:number, note: NoteDetailsModule){
     console.log(this.editNote);
     this.editNote.next({edit, index, note});
-
   }
 }
 
