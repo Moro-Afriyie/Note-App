@@ -23,8 +23,8 @@ export class AddNotePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.addNoteForm = new FormGroup({
-      title:  new FormControl('', Validators.required),
-      body: new FormControl('', Validators.required)
+      title:  new FormControl(null, Validators.required),
+      body: new FormControl(null, Validators.required)
     }
      
     );
