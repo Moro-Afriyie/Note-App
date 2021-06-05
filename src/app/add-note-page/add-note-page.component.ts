@@ -43,7 +43,7 @@ export class AddNotePageComponent implements OnInit {
   }
   else{
     this.addNoteForm = new FormGroup({
-      title:  new FormControl('ony3', Validators.required),
+      title:  new FormControl(null, Validators.required),
       body: new FormControl(null, Validators.required)
     }
     );
@@ -72,7 +72,7 @@ export class AddNotePageComponent implements OnInit {
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
-    this.notePadEditServcie.editNote.unsubscribe();
+    // this.notePadEditServcie.editNote.unsubscribe();
   }
 
 }
