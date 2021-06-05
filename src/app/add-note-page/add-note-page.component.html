@@ -25,18 +25,18 @@
         </div>
     </form> -->
     <!--Template Driven Form-->
-    <form #addNoteForm="ngForm" (ngSubmit)="onSubmit()" class="form-box">
+    <form #addNoteForm="ngForm" (ngSubmit)="onSubmit(addNoteForm)" class="form-box">
         <div class="form__fields">
             <mat-form-field class="form__title">
                 <mat-label>Title</mat-label>
-                <input matInput placeholder="Title goes here...." value="Sushi" formControlName="title">
-                <mat-error *ngIf="addNoteForm.get('title').hasError('required')">
+                <input matInput placeholder="Title goes here...." value="Sushi" name="title" [(ngModel)]="title" #title="ngModel" required>
+                <mat-error *ngIf="!title.valid && (title.dirty|| title.touched)">
                     Title is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
             <mat-form-field class="form__body">
                 <mat-label>Enter Note</mat-label>
-                <textarea matInput placeholder="Ex. It makes me feel..." formControlName="body" class="text"></textarea>
+                <textarea matInput placeholder="Ex. It makes me feel..." name="body" [(ngModel)]="body" class="text" #body="ngModel" required></textarea>
                 <mat-error *ngIf="addNoteForm.get('body').hasError('required')">
                     Note is <strong>required</strong>
                 </mat-error>
