@@ -32,8 +32,9 @@ export class AddNotePageComponent implements OnInit {
       console.log(res);
       // this.edit = res.edit;
       // this.index = res.index;
-      this.addNoteForm.value.title.setValue(res.note.title);
-      this.addNoteForm.value.body.setValue(res.note.body);
+      this.addNoteForm.value.setValue({title: res.note.title,
+      body: res.note.body});
+      // this.addNoteForm.value.body.setValue(res.note.body);
       console.log(this.addNoteForm.value);
       //  console.log("index: ", this.index );
       //  console.log("edit: ", this.edit);
