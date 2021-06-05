@@ -29,7 +29,7 @@
         <div class="form__fields">
             <mat-form-field class="form__title">
                 <mat-label>Title</mat-label>
-                <input matInput placeholder="Title goes here...." name="title" [(ngModel)]="header" #title="ngModel" required>
+                <input matInput placeholder="Title goes here...." value="Sushi" name="title" [(ngModel)]="header" #title="ngModel" required>
                 <mat-error *ngIf="title.invalid">
                     Title is <strong>required</strong>
                 </mat-error>

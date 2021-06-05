@@ -12,22 +12,22 @@ import { templateJitUrl } from '@angular/compiler';
 })
 
 export class AddNotePageComponent implements OnInit {
-  // addNoteForm: FormGroup;
+  addNoteForm: FormGroup;
   noteDetails: NoteDetailsModule;
-  header='moro is a fool';
-  content = 'ony3';
+  header='';
+  content = '';
   index:number;
   edit: boolean = false;
 
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
 
   ngOnInit(): void {
-    // this.addNoteForm = new FormGroup({
-    //   title:  new FormControl('', Validators.required),
-    //   body: new FormControl('', Validators.required)
-    // }
+    this.addNoteForm = new FormGroup({
+      title:  new FormControl('', Validators.required),
+      body: new FormControl('', Validators.required)
+    }
      
-    // );
+    );
     this.notePadEditServcie.editNote.subscribe(res =>{
       console.log(res);
       // this.edit = res.edit;
@@ -41,14 +41,14 @@ export class AddNotePageComponent implements OnInit {
   }
 
 // get the form controls
-  // get f(){
-  //   return this.addNoteForm.controls;
-  // }
+  get f(){
+    return this.addNoteForm.controls;
+  }
 
-  onSubmit(addNoteForm): void{
-    console.log(addNoteForm.value);
+  onSubmit(): void{
+    console.log(this.addNoteForm.value);
     // update the notpadLists from the service
-    this.notePadEditServcie.createNote(addNoteForm.value.title, addNoteForm.value.body.toString());
+    this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body.toString());
     
     // navigate to the main page
     this.router.navigate(['/']);
