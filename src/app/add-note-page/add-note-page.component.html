@@ -24,6 +24,7 @@
             <button mat-raised-button color="primary" type="submit" [disabled]="addNoteForm.invalid">Submit</button>
         </div>
     </form> -->
+    <!--Template Driven Form-->
     <form [formGroup]="addNoteForm" (ngSubmit)="onSubmit()" class="form-box">
         <div class="form__fields">
             <mat-form-field class="form__title">
