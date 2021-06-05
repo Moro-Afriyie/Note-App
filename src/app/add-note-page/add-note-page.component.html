@@ -25,7 +25,7 @@
         </div>
     </form> -->
     <!--Template Driven Form-->
-    <form [formGroup]="addNoteForm" (ngSubmit)="onSubmit()" class="form-box">
+    <form #addNoteForm="ngForm" (ngSubmit)="onSubmit()" class="form-box">
         <div class="form__fields">
             <mat-form-field class="form__title">
                 <mat-label>Title</mat-label>
