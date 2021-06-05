@@ -24,28 +24,4 @@
             <button mat-raised-button color="primary" type="submit" [disabled]="addNoteForm.invalid">Submit</button>
         </div>
     </form> -->
-    <!--Template Driven Form-->
-    <form #addNoteForm="ngForm" (ngSubmit)="onSubmit(addNoteForm)" class="form-box">
-        <div class="form__fields">
-            <mat-form-field class="form__title">
-                <mat-label>Title</mat-label>
-                <input matInput placeholder="Title goes here...." value="Sushi" name="title" [(ngModel)]="header" #title="ngModel" required>
-                <mat-error *ngIf="title.invalid">
-                    Title is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field class="form__body">
-                <mat-label>Enter Note</mat-label>
-                <textarea matInput placeholder="Ex. It makes me feel..." name="body" [(ngModel)]="content" class="text" #body="ngModel" required></textarea>
-                <mat-error *ngIf="body.errors.required">
-                    Note is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
-        </div>
-
-        <div class="form__buttons">
-            <button mat-raised-button color="warn" (click)="onCancel()">cancel</button>
-            <button mat-raised-button color="primary" type="submit" [disabled]="addNoteForm.invalid">Submit</button>
-        </div>
-    </form>
 </div>
