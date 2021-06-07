@@ -24,7 +24,8 @@ export class AddNotePageComponent implements OnInit {
     // get the index from the url
   this.route.queryParams.subscribe( params =>{
   this.index = params['id'];
-  console.log("index: ", this.index);
+  // console.log("index: ", this.index);
+  console.log("params: ", params);
   }
 
   );
