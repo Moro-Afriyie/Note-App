@@ -30,6 +30,7 @@ export class AddNotePageComponent implements OnInit {
   }
   );
 
+  // edit the note
   if(this.index){
     this.addNoteForm = new FormGroup({
       title:  new FormControl(this.noteDetails.title, Validators.required),
@@ -37,6 +38,8 @@ export class AddNotePageComponent implements OnInit {
     }
     );
   }
+
+  // add a new note
   else{
     this.addNoteForm = new FormGroup({
       title:  new FormControl(null, Validators.required),
