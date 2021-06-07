@@ -21,6 +21,12 @@ export class AddNotePageComponent implements OnInit {
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+  this.route.queryParams.subscribe( params =>{
+  this.index = params["id"];
+  console.log("index: ", this.index);
+  }
+
+  );
   this.addNoteForm = new FormGroup({
       title:  new FormControl(null, Validators.required),
       body: new FormControl(null, Validators.required)
