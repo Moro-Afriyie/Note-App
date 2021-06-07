@@ -1,7 +1,7 @@
 import { NoteDetailsModule } from './../models/note.model';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NotePadEditServiceService } from '../Services/note-pad-edit-service.service';
 import { templateJitUrl } from '@angular/compiler';
 
@@ -18,7 +18,7 @@ export class AddNotePageComponent implements OnInit {
   title: string="Create Note";
  
 
-  constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
+  constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   this.addNoteForm = new FormGroup({
