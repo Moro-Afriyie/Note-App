@@ -59,7 +59,7 @@ export class AddNotePageComponent implements OnInit {
   onSubmit(): void{
     // update the note
     if(this.index>=0){
-      
+      this.notePadEditServcie.updateNote(this.index, this.addNoteForm.value.title, this.addNoteForm.value.body.toString());
     }
 
     // add a new note
