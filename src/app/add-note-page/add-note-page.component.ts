@@ -22,7 +22,7 @@ export class AddNotePageComponent implements OnInit {
 
   ngOnInit(): void {
     // get the index from the url
-  this.route.queryParams.subscribe( params =>{
+  this.route.paramMap.subscribe( params =>{
   this.index = params['id'];
   // console.log("index: ", this.index);
   console.log("params: ", params);
