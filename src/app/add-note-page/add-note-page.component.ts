@@ -25,11 +25,11 @@ export class AddNotePageComponent implements OnInit {
   this.route.paramMap.subscribe( params =>{
   this.index = parseInt(params.get('id')); // set the index to the index in the url
   console.log("index: ", this.index);
+  this.noteDetails = this.notePadEditServcie.getEditNote(this.index);
   console.log(this.notePadEditServcie.getEditNote(this.index));
- 
   }
-
   );
+  
   this.addNoteForm = new FormGroup({
       title:  new FormControl(null, Validators.required),
       body: new FormControl(null, Validators.required)
