@@ -14,15 +14,16 @@ import { templateJitUrl } from '@angular/compiler';
 export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
   noteDetails: NoteDetailsModule;
-  index:number;
+  index;
   title: string="Create Note";
  
 
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // get the index from the url
   this.route.queryParams.subscribe( params =>{
-  this.index = params["id"];
+  this.index = params['id'];
   console.log("index: ", this.index);
   }
 
