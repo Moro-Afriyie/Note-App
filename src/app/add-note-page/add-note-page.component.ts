@@ -30,12 +30,7 @@ export class AddNotePageComponent implements OnInit {
   this.notePadEditServcie.editNote.subscribe(res =>{
       console.log(res);
       this.edit = res.edit;
-      // this.index = res.index;
-      // this.addNoteForm.setValue({title: res.note.title,
-      // body: res.note.body});
-      // this.addNoteForm.value.body.setValue(res.note.body);
-      // console.log(this.addNoteForm.value);
-      //  console.log("index: ", this.index );
+    
       console.log("edit: ", this.edit);
       if(this.edit){
        this.addNoteForm = new FormGroup({
