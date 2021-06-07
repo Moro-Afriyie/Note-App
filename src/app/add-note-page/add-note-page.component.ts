@@ -31,7 +31,7 @@ export class AddNotePageComponent implements OnInit {
   );
 
   // edit the note
-  if(this.index){
+  if(this.index>=0){
     this.addNoteForm = new FormGroup({
       title:  new FormControl(this.noteDetails.title, Validators.required),
       body: new FormControl(this.noteDetails.body, Validators.required)
@@ -47,15 +47,6 @@ export class AddNotePageComponent implements OnInit {
     }
     );
   }
-  
-    // this.addNoteForm = new FormGroup({
-    //   title:  new FormControl('ony3', Validators.required),
-    //   body: new FormControl('ots3', Validators.required)
-    // }
-    // );
-  
-      
-
 };
 
  
@@ -66,9 +57,17 @@ export class AddNotePageComponent implements OnInit {
   }
 
   onSubmit(): void{
-    console.log(this.addNoteForm.value);
-    // update the notpadLists from the service
-    this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body.toString());
+    // update the note
+    if(this.index>=0){
+      
+    }
+
+    // add a new note
+    else{
+      console.log(this.addNoteForm.value);
+      // update the notpadLists from the service
+      this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body.toString());
+    }
     
     // navigate to the main page
     this.router.navigate(['/']);

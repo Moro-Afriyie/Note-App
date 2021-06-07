@@ -71,8 +71,9 @@ export class NotePadEditServiceService {
   //edit the notes
   updateNote(index: number, note: NoteDetailsModule){
     // update the index with the new note
-    console.log(this.noteDetailsArray[index]);
-    this.noteDetailsArray[index]= note;
+    // console.log(this.noteDetailsArray[index]);
+    this.noteDetailsArray[index].title = note.title;
+    this.noteDetailsArray[index].body = note.body;
     
       // save to local storage
        this.saveToLocalStorage(this.noteDetailsArray);
