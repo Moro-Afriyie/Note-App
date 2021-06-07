@@ -15,6 +15,7 @@ export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
   noteDetails: NoteDetailsModule;
   index:number;
+  title: string="Create Note";
  
 
   constructor(private router: Router, private notePadEditServcie: NotePadEditServiceService) { }
