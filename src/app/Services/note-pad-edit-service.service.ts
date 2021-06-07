@@ -89,9 +89,6 @@ export class NotePadEditServiceService {
       this.saveToLocalStorage(this.noteDetailsArray);
 
   }
-  sendNoteDetails(edit: boolean, index:number, note: NoteDetailsModule){
-    console.log(this.editNote);
-    this.editNote.next({edit, index, note});
-  }
+ 
 }
 
