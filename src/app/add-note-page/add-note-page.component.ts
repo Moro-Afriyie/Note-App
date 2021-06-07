@@ -23,8 +23,9 @@ export class AddNotePageComponent implements OnInit {
   ngOnInit(): void {
     // get the index from the url
   this.route.paramMap.subscribe( params =>{
-  this.index = parseInt(params.get('id'));
+  this.index = parseInt(params.get('id')); // set the index to the index in the url
   console.log("index: ", this.index);
+  console.log(this.notePadEditServcie.getEditNote(this.index));
  
   }
 
