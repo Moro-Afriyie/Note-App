@@ -14,7 +14,7 @@ import { templateJitUrl } from '@angular/compiler';
 export class AddNotePageComponent implements OnInit {
   addNoteForm: FormGroup;
   noteDetails: NoteDetailsModule;
-  index;
+  index:number;
   title: string="Create Note";
  
 
@@ -23,7 +23,7 @@ export class AddNotePageComponent implements OnInit {
   ngOnInit(): void {
     // get the index from the url
   this.route.paramMap.subscribe( params =>{
-  this.index = params['id'];
+  this.index = parseInt(params.get('id'));
   console.log("index: ", this.index);
  
   }
