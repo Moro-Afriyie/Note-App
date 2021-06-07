@@ -32,19 +32,7 @@ export class AddNotePageComponent implements OnInit {
     //   body: new FormControl('ots3', Validators.required)
     // }
     // );
-  this.notePadEditServcie.editNote.subscribe(res =>{
-      console.log(res);
-      this.edit = res.edit;
-    
-      console.log("edit: ", this.edit);
-      if(this.edit){
-       this.addNoteForm = new FormGroup({
-         title:  new FormControl('ony3', Validators.required),
-         body: new FormControl('ots3', Validators.required)
-       }
-       );
-      }
-    });
+  
       
 
 };
