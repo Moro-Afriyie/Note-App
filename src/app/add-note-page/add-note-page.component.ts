@@ -29,12 +29,22 @@ export class AddNotePageComponent implements OnInit {
   console.log(this.notePadEditServcie.getEditNote(this.index));
   }
   );
-  
-  this.addNoteForm = new FormGroup({
+
+  if(this.index){
+    this.addNoteForm = new FormGroup({
+      title:  new FormControl(this.noteDetails.title, Validators.required),
+      body: new FormControl(this.noteDetails.body, Validators.required)
+    }
+    );
+  }
+  else{
+    this.addNoteForm = new FormGroup({
       title:  new FormControl(null, Validators.required),
       body: new FormControl(null, Validators.required)
     }
     );
+  }
+  
     // this.addNoteForm = new FormGroup({
     //   title:  new FormControl('ony3', Validators.required),
     //   body: new FormControl('ots3', Validators.required)
