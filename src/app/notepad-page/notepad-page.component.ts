@@ -51,19 +51,13 @@ export class NotepadPageComponent implements OnInit {
 
   }
   
-  // View and Edit the note
-  // onCardClicked(index: number, note: NoteDetailsModule){
-  //   this.notePadEditService.sendNoteDetails(true, index, note);
-  //   console.log("card clicked");
-  //   this.router.navigate(['/addNote']);
-  // }
   onAddNoteClicked(){
     this.router.navigate(['/addNote']);
   }
 
   // when the delete button is pressed
   onDeleteNote(index: number){
-    console.log('index: ', index);
+    
     let optionBtns = document.querySelectorAll('.js-option');
 
      // set setTimeout to allow the deletion to happen
@@ -72,7 +66,6 @@ export class NotepadPageComponent implements OnInit {
     }, 3200);
 
     var notepadCards: any = optionBtns[index].parentNode;
-    console.log(notepadCards);
    
      /*
      * Execute the delete animation

@@ -47,23 +47,18 @@ export class NotePadEditServiceService {
     body,
     );
 
-// this.noteDetailsArray = this.getNote();
-// console.log("note details array from service: ", this.noteDetailsArray);
     // push it into the array
     this.noteDetailsArray.push(this.noteDetails);
-    console.log("note details array from service: ", this.noteDetailsArray);
 
     // store the array in local storage
     this.saveToLocalStorage(this.noteDetailsArray);
 
-    // this.newNotesCreatedArray.next(this.noteDetails);
   }
 
   // get the notes
   getNote(){
     // get the array from local storage
     this.noteDetailsArray = JSON.parse(localStorage.getItem("note") || "[]");
-    console.log(this.noteDetailsArray);
     // returns a copy of the array
     return this.noteDetailsArray.slice();
   }
@@ -71,7 +66,6 @@ export class NotePadEditServiceService {
   //edit the notes
   updateNote(index: number, title:string, body: string){
     // update the index with the new note
-    // console.log(this.noteDetailsArray[index]);
     this.noteDetailsArray[index].title = title;
     this.noteDetailsArray[index].body = body;
     
@@ -84,7 +78,6 @@ export class NotePadEditServiceService {
   deleteNote(index: number){
     this.noteDetailsArray.splice(index, 1); // delete the card
       this.noteDetailsArray = [...this.noteDetailsArray]; // update the list
-      console.log(this.noteDetailsArray);
 
       // save to local storage
       this.saveToLocalStorage(this.noteDetailsArray);

@@ -24,9 +24,7 @@ export class AddNotePageComponent implements OnInit {
     // get the index from the url
   this.route.paramMap.subscribe( params =>{
   this.index = parseInt(params.get('id')); // set the index to the index in the url
-  console.log("index: ", this.index);
   this.noteDetails = this.notePadEditServcie.getEditNote(this.index);
-  console.log(this.notePadEditServcie.getEditNote(this.index));
   }
   );
 
@@ -66,7 +64,6 @@ export class AddNotePageComponent implements OnInit {
 
     // add a new note
     else{
-      console.log(this.addNoteForm.value);
       // update the notpadLists from the service
       this.notePadEditServcie.createNote(this.addNoteForm.value.title, this.addNoteForm.value.body.toString());
     }
@@ -78,12 +75,6 @@ export class AddNotePageComponent implements OnInit {
   onCancel(){
     // navigate to the main page
     this.router.navigate(['/']);
-  }
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    // this.notePadEditServcie.editNote.unsubscribe();
   }
 
 }
