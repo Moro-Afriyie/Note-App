@@ -32,6 +32,7 @@ export class AddNotePageComponent implements OnInit {
 
   // edit the note
   if(this.index>=0){
+    this.title = 'Edit Note';
     this.addNoteForm = new FormGroup({
       title:  new FormControl(this.noteDetails.title, Validators.required),
       body: new FormControl(this.noteDetails.body, Validators.required)
@@ -41,6 +42,7 @@ export class AddNotePageComponent implements OnInit {
 
   // add a new note
   else{
+    this.title ="Create Note";
     this.addNoteForm = new FormGroup({
       title:  new FormControl(null, Validators.required),
       body: new FormControl(null, Validators.required)
