@@ -90,5 +90,8 @@ export class NotePadEditServiceService {
 
   }
  
+  getEditNote(index: number){
+    return this.noteDetailsArray[index];
+  }
 }
 
