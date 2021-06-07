@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', component: MainPageComponent, children: [
     {path:'', component: NotepadPageComponent},
     {path: 'addNote', component: AddNotePageComponent},
-    {path: 'editNote:id', component: AddNotePageComponent}
+    {path: 'editNote/:id', component: AddNotePageComponent}
   ]}
 ];
 

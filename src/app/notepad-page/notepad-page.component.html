@@ -14,7 +14,7 @@
     <div class="notepad__cards">
         <div class="cards-box">
             <div class="card-container" *ngFor="let noteDetails of notepadListArray | filter: searchText; let index = index">
-                <div class="card__container__box" routerLink="['editNote', index]">
+                <div class="card__container__box" routerLink="['/editNote', index]">
                     <div class="card__date">
                         <h1 class="card__date__day">{{noteDetails.day}}</h1>
                         <p class="card__date__month">{{noteDetails.month}}</p>
