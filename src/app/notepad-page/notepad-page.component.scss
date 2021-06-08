@@ -23,7 +23,7 @@
 }
 
 .form {
-    transition: all 0.5s;
+    // transition: all 0.5s;
     position: absolute;
     width: 85%;
 }
@@ -33,7 +33,7 @@
     background-color: #f6f5f0;
     border-radius: 15px;
     padding: 4px;
-    width: 600px;
+    max-width: 600px;
     box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
 }
 
