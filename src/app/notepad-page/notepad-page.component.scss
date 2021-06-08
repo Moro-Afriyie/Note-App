@@ -207,6 +207,15 @@
         .card__body {
             flex-grow: 1;
             color: rgba(145, 142, 142, 0.959);
+            @media screen and (max-width: 630px) {
+                overflow: hidden;
+                display: inline-block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                // width: 47vw;
+                margin-top: 0.8rem;
+                width: 30rem;
+            }
         }
     }
     .card__item__option {
