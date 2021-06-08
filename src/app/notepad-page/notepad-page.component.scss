@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid red;
 }
 
 form {
@@ -134,7 +135,8 @@ form {
 .notepad__cards {
     /* flex: 1; */
     /* margin-top: 1rem; */
-    max-width: 635px;
+    // max-width: 635px;
+    max-width: 100%;
     overflow-y: auto;
     height: 66vh;
     position: relative;
