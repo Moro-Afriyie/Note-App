@@ -214,13 +214,22 @@
                 white-space: nowrap;
                 // width: 47vw;
                 margin-top: 0.8rem;
-                width: 29rem;
+                width: 24rem;
             }
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 550px) {
                 width: 22rem;
             }
-            @media screen and (max-width: 400px) {
+            @media screen and (max-width: 480px) {
+                width: 20rem;
+            }
+            @media screen and (max-width: 435px) {
+                width: 18rem;
+            }
+            @media screen and (max-width: 410px) {
                 width: 16rem;
+            }
+            @media screen and (max-width: 350px) {
+                width: 13rem;
             }
             @media screen and (max-width: 320px) {
                 width: 11rem;
