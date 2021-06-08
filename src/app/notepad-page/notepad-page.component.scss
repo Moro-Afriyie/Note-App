@@ -6,6 +6,8 @@
     margin: auto;
     height: 100%;
     position: relative;
+    border: 1px solid;
+    align-items: center;
 }
 
 .notepad__search {
@@ -15,6 +17,7 @@
     height: 5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 form {
